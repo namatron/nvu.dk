@@ -1,5 +1,5 @@
 {
-  "genereret": "2026-09-13T21:09+02:00",
+  "genereret": "2026-09-13T21:25+02:00",
   "projekter": [
     {
       "noegle": "projekt_1",
@@ -8,11 +8,11 @@
       "status": "Startet 13. september 2026",
       "loefte": "Tjener sporet hverken penge eller leads inden 13. december 2026, lukker jeg det og bruger tiden et andet sted.",
       "case": null,
-      "tokens": 7598084,
-      "listepris_kr": 40.47,
-      "sessioner": 1,
-      "fra": "2026-09-13",
-      "til": "2026-09-13",
+      "tokens": 0,
+      "listepris_kr": 0.0,
+      "sessioner": 0,
+      "fra": null,
+      "til": null,
       "tjent_kr": 0
     },
     {
@@ -30,7 +30,7 @@
       "tjent_kr": 0.0
     }
   ],
-  "privat_tokens": 3103013464,
+  "privat_tokens": 3134103118,
   "serie": [
     {
       "dato": "2026-08-15",
@@ -155,17 +155,16 @@
     {
       "dato": "2026-09-13",
       "projekt_2": 4819909,
-      "projekt_1": 7598084,
-      "privat": 262793045
+      "privat": 293882699
     }
   ],
   "total": {
-    "tokens": 3374789729,
-    "tokens_offentlige": 271776265,
-    "listepris_kr": 1446.56,
+    "tokens": 3398281299,
+    "tokens_offentlige": 264178181,
+    "listepris_kr": 1406.09,
     "tjent_kr": 0.0,
-    "resultat_kr": -1446.56,
-    "sessioner": 10,
+    "resultat_kr": -1406.09,
+    "sessioner": 9,
     "projekter": 2
   }
 }

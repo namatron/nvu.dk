@@ -284,7 +284,7 @@ body{overflow-x:clip}
 
 /* =====================================================================
    Video-hero i Legora-stil (forsiden). Bevidst altid moerk, uanset tema:
-   teksten staar paa video, saa farverne er faste og ikke tema-tokens.
+   teksten staar paa video, saa farverne er faste og ikke tema-variabler.
    ===================================================================== */
 .vhero{position:relative;min-height:min(100svh,62rem);display:flex;flex-direction:column;
   justify-content:flex-end;overflow:hidden;background:#0B1012;color:#F4F5F3;isolation:isolate}
@@ -389,6 +389,16 @@ body{overflow-x:clip}
 .row.privat h3{color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.chart-tip{transition:none}}
 .ledger dd .u{white-space:nowrap}
+
+/* ------------------------------------------------ resultater (hvad AI har givet) */
+.wins{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line)}
+.win{background:var(--surface);padding:1.4rem 1.4rem 1.3rem;display:flex;flex-direction:column;gap:.15rem;min-width:0}
+.win .p{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
+.win .big{font-family:var(--display);font-weight:700;font-size:clamp(2.1rem,4.4vw,3rem);line-height:1;letter-spacing:-.035em;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+.win .unit{font-family:var(--display);font-weight:500;font-size:1rem;color:var(--ink)}
+.win p{margin:.6rem 0 0;color:var(--muted);font-size:.95rem;line-height:1.5}
 </style>
 </head>
 <body>
@@ -397,7 +407,7 @@ body{overflow-x:clip}
   <a class="brand" href="../../">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="../../#cases" aria-current="page">Cases</a>
-    <a href="../../ai/">Dashboard</a>
+    <a href="../../ai/">Resultater</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -420,7 +430,7 @@ body{overflow-x:clip}
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="../../ai/">Performance AI dashboard</a>
+  <a href="../../ai/">Resultater</a>
 </footer></div>
 </body>
 </html>
