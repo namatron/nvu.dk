@@ -317,9 +317,6 @@ body{overflow-x:clip}
 .vhero .corner{position:absolute;bottom:1rem;left:clamp(1.25rem,4vw,2.5rem);right:clamp(1.25rem,4vw,2.5rem);
   display:flex;justify-content:space-between;align-items:center;gap:1rem;
   font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,245,243,.5)}
-.vtoggle{background:none;border:1px solid rgba(244,245,243,.35);color:rgba(244,245,243,.8);border-radius:999px;
-  font:inherit;letter-spacing:inherit;text-transform:inherit;padding:.35rem .7rem;cursor:pointer}
-.vtoggle:hover{border-color:#fff;color:#fff}
 
 /* Menu ovenpaa videoen: gennemsigtig, ordmaerke i midten. Bliver til den
    almindelige menu, naar man har scrollet forbi heroen (klassen saettes af JS). */
@@ -391,8 +388,7 @@ body{overflow-x:clip}
       <a class="vlink" href="ai/">Se resultaterne</a>
     </div>
   </div>
-  <div class="corner"><span>AI-genereret video</span>
-    <button class="vtoggle" type="button" aria-pressed="false">Pause</button></div>
+  <div class="corner"><span>AI-genereret video</span></div>
 </section>
 <div class="wrap" style="padding-top:clamp(2.5rem,6vw,4rem)">
 <div class="ledger-head"><p class="label">Resultater live · opdateret 13. september 2026</p>
@@ -444,21 +440,16 @@ body{overflow-x:clip}
 (function () {
   var hero = document.querySelector('.vhero'), nav = document.querySelector('.nav.over');
   if (!hero) return;
-  var video = hero.querySelector('video'), knap = hero.querySelector('.vtoggle');
+  var video = hero.querySelector('video');
   if (nav && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (e) {
       nav.classList.toggle('solid', !e[0].isIntersecting);
     }, { rootMargin: '-64px 0px 0px 0px' }).observe(hero);
   } else if (nav) { nav.classList.add('solid'); }
-  function saet(pause) {
-    if (!video) return;
-    if (pause) { video.pause(); } else { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
-    knap.textContent = pause ? 'Afspil' : 'Pause';
-    knap.setAttribute('aria-pressed', pause ? 'true' : 'false');
-  }
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { saet(true); }
-  else if (video && video.paused) { saet(false); }  // ekstra startforsoeg hvis autoplay blev holdt tilbage
-  knap.addEventListener('click', function () { saet(!video.paused); });
+  // Ingen pause-knap (Nams valg 2026-09-13). Reduceret bevaegelse pauser stadig videoen.
+  if (!video) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { video.pause(); }
+  else if (video.paused) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }  // ekstra startforsoeg
 })();
 </script>
 </body>
