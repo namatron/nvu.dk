@@ -399,6 +399,12 @@ body{overflow-x:clip}
   font-variant-numeric:tabular-nums;color:var(--ink)}
 .win .unit{font-family:var(--display);font-weight:500;font-size:1rem;color:var(--ink)}
 .win p{margin:.6rem 0 0;color:var(--muted);font-size:.95rem;line-height:1.5}
+
+/* /ai: kun grafen */
+.chart-page .case-hero{padding-bottom:1.5rem}
+.chart-page .case-hero h1{font-size:clamp(2rem,5vw,3.2rem)}
+.chart-page{padding-bottom:clamp(3rem,7vw,5rem)}
+#resultater{scroll-margin-top:5rem}
 </style>
 </head>
 <body>
@@ -407,7 +413,8 @@ body{overflow-x:clip}
   <a class="brand" href="./">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="./#cases">Cases</a>
-    <a href="ai/">Resultater</a>
+    <a href="./#resultater">Resultater</a>
+    <a href="ai/">AI-forbrug</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -423,14 +430,14 @@ body{overflow-x:clip}
     <p class="lede">Du bruger allerede AI til mails og tekster. Næste skridt er at lade det tage rigtigt arbejde fra dig. Jeg viser hvordan, og hvad det har givet i mine egne projekter.</p>
     <div class="actions">
       <a class="pill" href="mailto:nam@nvu.dk">Skriv til mig<span class="c" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="vlink" href="ai/">Se hvad AI har givet</a>
+      <a class="vlink" href="#resultater">Se hvad AI har givet</a>
     </div>
   </div>
   <div class="corner"><span>AI-genereret video</span></div>
 </section>
 <div class="wrap" style="padding-top:clamp(2.5rem,6vw,4rem)">
-<div class="ledger-head"><p class="label">Hvad AI har givet i mine projekter</p>
-  <a href="ai/">Alle resultater →</a></div>
+<div class="ledger-head" id="resultater"><p class="label">Hvad AI har givet i mine projekter</p>
+  <a href="ai/">Se AI-forbruget pr. dag →</a></div>
 <div class="wins"><div class="win"><span class="p">Konsulentarbejde</span><span class="big">6 → 2</span><span class="unit">timer om ugen på afregning</span><p>Den største administrative opgave blev automatiseret. Tiden gik fra 6 til 2 timer på en uge og kan nu bruges på salg.</p></div><div class="win"><span class="p">Build in public</span><span class="big">1 dag</span><span class="unit">fra idé til live hjemmeside</span><p>nvu.dk blev bygget og udgivet med AI på én dag, med domæne, sikker forbindelse og video.</p></div></div>
 </div>
 
@@ -455,7 +462,7 @@ body{overflow-x:clip}
   <span><h3>AI first brætspil</h3><p>Udviklet med AI.</p></span>
   <span class="mini"></span><span class="arr" aria-hidden="true">→</span></a><a class="case-row" href="ai/">
   <span class="tag">Eget projekt</span>
-  <span><h3>Resultater og forbrug</h3><p>Hvad AI har givet i mine projekter, og hvad det har kostet. Opdateres hver dag.</p></span>
+  <span><h3>AI-forbrug pr. dag</h3><p>Hvor meget AI jeg bruger hver dag, fordelt på projekter. Opdateres hver dag.</p></span>
   <span class="mini"></span><span class="arr" aria-hidden="true">→</span></a><a class="case-row" href="case/trustpilot/">
   <span class="tag">Erfaring</span>
   <span><h3>Trustpilot</h3><p>Fire år med at lede Customer Success for de nordiske B2B-kunder.</p></span>
@@ -471,7 +478,7 @@ body{overflow-x:clip}
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="ai/">Resultater</a>
+  <a href="ai/">AI-forbrug pr. dag</a>
 </footer></div>
 <script>
 (function () {
