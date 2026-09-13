@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+  <title>Nam Vu · Blog</title>
+  <link>https://nvu.dk/blog/</link>
+  <description>Hvad jeg bygger med AI, og hvad det giver.</description>
+  <language>da</language>
+  <item>
+    <title>Du bruger AI til mails. Jeg bruger det til at drive min forretning.</title>
+    <link>https://nvu.dk/blog/hvad-jeg-har-bygget-med-ai/</link>
+    <guid isPermaLink="true">https://nvu.dk/blog/hvad-jeg-har-bygget-med-ai/</guid>
+    <pubDate>Sun, 13 Sep 2026 00:00:00 +0200</pubDate>
+    <description>Som AI coach viser jeg, hvad AI kan i en lille forretning. Jeg er ikke udvikler, men har siden maj bygget 23 ting med AI. Her er listen.</description>
+    <content:encoded><![CDATA[<p>De fleste jeg taler med, bruger AI på samme måde. De får den til at skrive en mail, rette en tekst eller lave et hurtigt resumé.</p>
+<p>Det er fint. Men det er også der, de fleste stopper.</p>
+<p>Jeg er ikke udvikler. Jeg kommer fra salg og kundesucces. Alligevel har jeg siden maj bygget de systemer, min forretning kører på, med AI som medspiller.</p>
+<p>Her er listen.</p>
+<h2>Administration</h2>
+<ul><li>Bygget AI-agent der laver månedsafregning</li><li>Bygget automatisk kontrol af udbetalinger</li><li>Koblet AI på regnskabsprogrammet</li><li>Bygget AI-agent der bogfører regnskab</li><li>Bygget AI-agent der laver momsafregning</li><li>Bygget månedligt AI-tjek af regnskabet</li></ul>
+<h2>Salg</h2>
+<ul><li>Bygget mit eget CRM med live-dashboard</li><li>Bygget automatisk opgørelse af indtægt pr. aftale</li><li>Bygget AI der analyserer konkurrenters annoncer og priser</li><li>Bygget AI-screening af mulige samarbejdspartnere</li><li>Bygget alarm der opdager fejl i salgssporing</li><li>Bygget værktøj der laver annonce-eksempler til salgsmails</li><li>Bygget automatisering der sender ansøgninger samlet</li><li>Bygget automatisk statusopdatering efter salgsmails</li><li>Bygget AI-kvalitetstjek af annoncetekster</li></ul>
+<h2>Overblik over mit eget arbejde</h2>
+<ul><li>Bygget AI der opsummerer min arbejdsdag</li><li>Bygget min egen AI-assistent i telefonen</li><li>Bygget arbejdsbord over alt mit AI-arbejde</li><li>Bygget daglig måling mod mine mål</li><li>Bygget overblik over alle mine automatiseringer</li><li>Bygget måler der viser mit AI-forbrug hver dag</li></ul>
+<h2>Egne projekter</h2>
+<ul><li>Bygget AI-simulering der tester et brætspil</li><li>Bygget og udgivet min hjemmeside med AI på én dag</li></ul>
+<h2>Listen er ikke pointen</h2>
+<p>Et værktøj tæller først, når det giver noget igen.</p>
+<p>Mit største resultat indtil nu er ikke det mest avancerede. Afregning og talkontrol tog 6 timer om ugen. Ugen efter automatiseringen tog det 2.</p>
+<p>De 4 timer går nu til salg.</p>
+<p>Det er det, jeg kalder <strong>Performance AI</strong>. AI der bliver målt på, hvad det giver.</p>
+<h2>Start med én opgave</h2>
+<p>Du behøver ikke bygge 23 ting.</p>
+<p>Find den opgave, der tager flest timer om ugen, og som du gør på samme måde hver gang. Det er den, AI skal tage først.</p>]]></content:encoded>
+  </item>
+</channel>
+</rss>

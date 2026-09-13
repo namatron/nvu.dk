@@ -4,10 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Fire år med at lede Customer Success for de nordiske B2B-kunder.">
+<link rel="canonical" href="https://nvu.dk/case/trustpilot/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Nam Vu">
+<meta property="og:title" content="Trustpilot · Nam Vu">
+<meta property="og:description" content="Fire år med at lede Customer Success for de nordiske B2B-kunder.">
+<meta property="og:url" content="https://nvu.dk/case/trustpilot/">
+<meta property="og:image" content="https://nvu.dk/assets/hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <title>Trustpilot · Nam Vu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="alternate" type="application/rss+xml" title="Nam Vu · Blog" href="https://nvu.dk/blog/feed.xml">
 <style>
 :root {
   --ground:#F4F5F3; --surface:#FFFFFF; --soft:#E4EDEC;
@@ -423,6 +433,36 @@ body{overflow-x:clip}
   .byggelog li{grid-template-columns:4.2rem minmax(0,1fr)}
   .byggelog li>div{grid-column:1/-1}
 }
+
+/* ---------------------------------------------------------------- blog */
+.posts{border-top:1px solid var(--line-strong);margin-bottom:clamp(2rem,5vw,3rem)}
+.post-row{display:grid;grid-template-columns:10rem minmax(0,1fr) 1.5rem;gap:.3rem 1.8rem;align-items:baseline;
+  padding:1.5rem 0;border-bottom:1px solid var(--line);text-decoration:none}
+.post-row time{font-family:var(--mono);font-size:.76rem;color:var(--faint)}
+.post-row h2{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,2.6vw,1.75rem);letter-spacing:-.02em;
+  line-height:1.15;margin:0;transition:color .15s;text-wrap:balance}
+.post-row p{margin:.4rem 0 0;color:var(--muted);font-size:.97rem;max-width:62ch}
+.post-row .arr{font-family:var(--display);font-size:1.3rem;color:var(--faint);transition:transform .15s,color .15s}
+.post-row:hover h2,.post-row:hover .arr{color:var(--accent)}
+.post-row:hover .arr{transform:translateX(4px)}
+@media (max-width:620px){.post-row{grid-template-columns:minmax(0,1fr) 1.5rem}.post-row time{grid-column:1/-1}}
+.post{max-width:68ch;margin:0 auto;padding:clamp(2rem,6vw,4rem) 0 clamp(1rem,3vw,2rem)}
+.post header time{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.post h1{font-size:clamp(2.1rem,5.4vw,3.4rem);margin:.8rem 0 2rem}
+.post-body{font-size:1.1rem;line-height:1.7}
+.post-body p{margin:0 0 1.15rem}
+.post-body h2{font-family:var(--display);font-weight:700;font-size:1.45rem;letter-spacing:-.015em;margin:2.4rem 0 .9rem}
+.post-body ul{list-style:none;margin:0 0 1.4rem;padding:0;border-top:1px solid var(--line)}
+.post-body li{padding:.6rem 0 .6rem 1.4rem;border-bottom:1px solid var(--line);position:relative;font-size:1rem}
+.post-body li::before{content:"";position:absolute;left:0;top:1.15em;width:.5rem;height:2px;background:var(--accent)}
+.post-body strong{font-weight:600;color:var(--ink)}
+.post-body a{color:var(--accent)}
+
+/* Menuen maa ikke knaekke paa smalle skaerme ("Nam / Vu", "Skriv til / mig"). */
+.brand,.nav .btn,.nav .btn .t{white-space:nowrap}
+@media (max-width:420px){.brand small{display:none}.nav .wrap{gap:.8rem}.nav .btn{padding:.45rem .7rem;font-size:.82rem}}
+
+.services-intro{margin:0 0 1.6rem;font-family:var(--display);font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.35;letter-spacing:-.01em;max-width:34ch;text-wrap:balance}
 </style>
 </head>
 <body>
@@ -433,6 +473,7 @@ body{overflow-x:clip}
     <a href="../../#cases" aria-current="page">Cases</a>
     <a href="../../#resultater">Resultater</a>
     <a href="../../ai/">AI-forbrug</a>
+    <a href="../../blog/">Blog</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -449,7 +490,7 @@ body{overflow-x:clip}
 </div>
 <div style="margin-top:clamp(3rem,7vw,5rem)"><section class="section"><div class="wrap split"><h2 class="label">Kort introduktion</h2><div class="prose"><p>Jeg sad med Trustpilots B2B-kunder i Norden. Over 2.000 SaaS-kunder og en portefølje, der både skulle holdes og vokse.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Rollen</h2><div class="prose"><p>Jeg ledte et team på over 14 Customer Success Managers og havde ansvaret for porteføljen i Skandinavien.</p><p>Jeg var også en del af All Stars-teamet: top-performere udvalgt af en komité på tværs af afdelingerne og sat på strategiske projekter.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Resultat</h2><div class="prose"><p>Porteføljens årlige kontraktværdi gik fra 10 til 20 mio. EUR. En fordobling.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Det tager jeg med</h2><div class="prose"><p>Kundebehov og forretningsprocesser først. Når jeg ved hvor tiden forsvinder i en forretning, ved jeg også hvor AI gør en forskel. Værktøjet kommer til sidst.</p></div></div></section></div>
 <div style="margin-top:clamp(2rem,5vw,3rem)"><div class="wrap"><a class="next" href="../../case/braetspil/"><span class="label">Næste case</span><strong>AI first brætspil →</strong></a></div></div>
-<div class="wrap"><aside class="cta" id="kontakt"><p>Send mig den proces, der tager flest timer om ugen. Så kigger jeg på, om AI kan tage den.</p><a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a></aside></div>
+<div class="wrap"><aside class="cta" id="kontakt"><p>Skriv hvor du bruger AI i dag, og hvor du gerne vil hen. Så tager vi en snak om dit næste skridt.</p><a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a></aside></div>
 </main>
 <div class="wrap"><footer class="foot">
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
