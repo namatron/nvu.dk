@@ -1,5 +1,5 @@
 {
-  "genereret": "2026-09-13T21:39+02:00",
+  "genereret": "2026-09-13T21:49+02:00",
   "projekter": [
     {
       "noegle": "projekt_1",
@@ -30,7 +30,7 @@
       "tjent_kr": 0.0
     }
   ],
-  "privat_tokens": 3134103118,
+  "privat_tokens": 3158805546,
   "serie": [
     {
       "dato": "2026-08-15",
@@ -155,11 +155,11 @@
     {
       "dato": "2026-09-13",
       "projekt_2": 4819909,
-      "privat": 293882699
+      "privat": 318585127
     }
   ],
   "total": {
-    "tokens": 3398281299,
+    "tokens": 3422983727,
     "tokens_offentlige": 264178181,
     "listepris_kr": 1406.09,
     "tjent_kr": 0.0,
