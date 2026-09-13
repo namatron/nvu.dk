@@ -1,7 +1,8 @@
 {
-  "genereret": "2026-09-13T21:01+02:00",
+  "genereret": "2026-09-13T21:09+02:00",
   "projekter": [
     {
+      "noegle": "projekt_1",
       "titel": "Build in public",
       "hvad": "Content om det jeg bygger. Skal tjene sine egne penge på sponsorater og affiliate.",
       "status": "Startet 13. september 2026",
@@ -15,6 +16,7 @@
       "tjent_kr": 0
     },
     {
+      "noegle": "projekt_2",
       "titel": "AI first brætspil",
       "hvad": "Udviklet med AI. Regler, balance og kortillustrationer.",
       "status": "Under udvikling",
@@ -28,10 +30,141 @@
       "tjent_kr": 0.0
     }
   ],
+  "privat_tokens": 3103013464,
+  "serie": [
+    {
+      "dato": "2026-08-15",
+      "privat": 0
+    },
+    {
+      "dato": "2026-08-16",
+      "privat": 0
+    },
+    {
+      "dato": "2026-08-17",
+      "privat": 17178894
+    },
+    {
+      "dato": "2026-08-18",
+      "privat": 29376792
+    },
+    {
+      "dato": "2026-08-19",
+      "privat": 15090877
+    },
+    {
+      "dato": "2026-08-20",
+      "privat": 76208989
+    },
+    {
+      "dato": "2026-08-21",
+      "privat": 130848857
+    },
+    {
+      "dato": "2026-08-22",
+      "projekt_2": 485148,
+      "privat": 13849402
+    },
+    {
+      "dato": "2026-08-23",
+      "privat": 13882597
+    },
+    {
+      "dato": "2026-08-24",
+      "privat": 79379719
+    },
+    {
+      "dato": "2026-08-25",
+      "privat": 96217886
+    },
+    {
+      "dato": "2026-08-26",
+      "privat": 166720701
+    },
+    {
+      "dato": "2026-08-27",
+      "privat": 122046706
+    },
+    {
+      "dato": "2026-08-28",
+      "privat": 113712229
+    },
+    {
+      "dato": "2026-08-29",
+      "privat": 38148489
+    },
+    {
+      "dato": "2026-08-30",
+      "privat": 212926438
+    },
+    {
+      "dato": "2026-08-31",
+      "privat": 148891574
+    },
+    {
+      "dato": "2026-09-01",
+      "privat": 21959407
+    },
+    {
+      "dato": "2026-09-02",
+      "privat": 110897804
+    },
+    {
+      "dato": "2026-09-03",
+      "projekt_2": 15772903,
+      "privat": 44826930
+    },
+    {
+      "dato": "2026-09-04",
+      "privat": 43445193
+    },
+    {
+      "dato": "2026-09-05",
+      "projekt_2": 9227336,
+      "privat": 97104605
+    },
+    {
+      "dato": "2026-09-06",
+      "projekt_2": 6433864,
+      "privat": 20949755
+    },
+    {
+      "dato": "2026-09-07",
+      "privat": 225860282
+    },
+    {
+      "dato": "2026-09-08",
+      "privat": 198445035
+    },
+    {
+      "dato": "2026-09-09",
+      "privat": 183681225
+    },
+    {
+      "dato": "2026-09-10",
+      "privat": 135214034
+    },
+    {
+      "dato": "2026-09-11",
+      "privat": 175294432
+    },
+    {
+      "dato": "2026-09-12",
+      "privat": 11612661
+    },
+    {
+      "dato": "2026-09-13",
+      "projekt_2": 4819909,
+      "projekt_1": 7598084,
+      "privat": 262793045
+    }
+  ],
   "total": {
-    "tokens": 271776265,
+    "tokens": 3374789729,
+    "tokens_offentlige": 271776265,
     "listepris_kr": 1446.56,
     "tjent_kr": 0.0,
+    "resultat_kr": -1446.56,
     "sessioner": 10,
     "projekter": 2
   }

@@ -361,6 +361,34 @@ body{overflow-x:clip}
 .ledger .cost dd,.fig.cost .v{color:var(--neg)}
 .ledger .earn dd,.fig.earn .v{color:var(--pos)}
 .case-row .mini b{color:var(--ink)}
+
+/* ---------------------------------------------------- dashboard: diagram */
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.3rem;margin:0 0 1rem;padding:0;list-style:none;
+  font-size:.9rem;color:var(--muted)}
+.legend i,.chart-tip i{display:inline-block;width:.7rem;height:.7rem;border-radius:2px;margin-right:.45rem;vertical-align:-.05rem}
+.chart{position:relative}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart .g{stroke:var(--line);stroke-width:1}
+.chart text{fill:var(--faint);font-family:var(--mono);font-size:10.5px;font-variant-numeric:tabular-nums}
+.chart .hit{fill:var(--ink);fill-opacity:0;cursor:crosshair}
+.chart .hit.on{fill-opacity:.06}
+.chart-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--ground);padding:.6rem .75rem;
+  border-radius:3px;font-size:.82rem;line-height:1.5;white-space:nowrap;opacity:0;transition:opacity .12s;
+  z-index:3;transform:translate(-50%,-100%);display:flex;flex-direction:column;min-width:13rem}
+.chart-tip.on{opacity:1}
+.chart-tip strong{font-family:var(--display);font-weight:700}
+.chart-tip .r{display:flex;justify-content:space-between;gap:1.2rem;font-variant-numeric:tabular-nums}
+.chart-tip .sum{border-top:1px solid color-mix(in srgb,var(--ground) 30%,transparent);margin-top:.25rem;padding-top:.25rem}
+.tabel summary{cursor:pointer;font-family:var(--mono);font-size:.74rem;color:var(--accent);margin-top:1.1rem;
+  letter-spacing:.08em;text-transform:uppercase}
+.tabel-scroll{overflow-x:auto;margin-top:.8rem}
+.tabel table{border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums;width:100%}
+.tabel th,.tabel td{padding:.35rem .6rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.tabel th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.tabel th:first-child,.tabel td:first-child{text-align:left}
+.row.privat h3{color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.chart-tip{transition:none}}
+.ledger dd .u{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -369,7 +397,7 @@ body{overflow-x:clip}
   <a class="brand" href="../../">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="../../#cases" aria-current="page">Cases</a>
-    <a href="../../ai/">Resultater</a>
+    <a href="../../ai/">Dashboard</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -392,7 +420,7 @@ body{overflow-x:clip}
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="../../ai/">Resultater live</a>
+  <a href="../../ai/">Performance AI dashboard</a>
 </footer></div>
 </body>
 </html>
