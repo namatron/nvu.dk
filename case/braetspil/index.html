@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Et terningespil, hvor AI bygger kort, regler og balance.">
-<title>Brætspillet · Nam Vu</title>
+<meta name="description" content="Udviklet med AI.">
+<title>AI first brætspil · Nam Vu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -13,7 +13,7 @@
   --ground:#F4F5F3; --surface:#FFFFFF; --soft:#E4EDEC;
   --ink:#14181B; --muted:#58646A; --faint:#859094;
   --accent:#0D5C63; --accent-hover:#0A474D; --on-accent:#FFFFFF;
-  --amber:#8A5E14;
+  --amber:#8A5E14; --neg:#B3261E; --pos:#1B7A48;
   --line:#DBDFDB; --line-strong:#B6BDB9;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"Source Serif 4",Georgia,"Times New Roman",serif;
@@ -25,7 +25,7 @@
     --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
     --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
     --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-    --amber:#C99A3E;
+    --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
     --line:#232B2E; --line-strong:#37444A;
     color-scheme:dark;
   }
@@ -34,7 +34,7 @@
   --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
   --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
   --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-  --amber:#C99A3E;
+  --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
   --line:#232B2E; --line-strong:#37444A;
   color-scheme:dark;
 }
@@ -359,6 +359,11 @@ body{overflow-x:clip}
 /* Paa skaerme smallere end 16:9 beskaerer videoen siderne. Forankr lidt mod venstre,
    saa personen rykker mod hoejre og vaek fra overskriften. Mobil beholder midten. */
 @media (min-width:761px){.vhero video,.vhero .poster{object-position:15% 35%}}
+
+/* Resultater: AI-forbrug er en udgift (roed, minus), omsaetning er indtaegt (groen). */
+.ledger .cost dd,.fig.cost .v{color:var(--neg)}
+.ledger .earn dd,.fig.earn .v{color:var(--pos)}
+.case-row .mini b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -367,31 +372,31 @@ body{overflow-x:clip}
   <a class="brand" href="../../">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="../../#cases" aria-current="page">Cases</a>
-    <a href="../../ai/">Regnskab</a>
+    <a href="../../ai/">Resultater</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
 </div></header>
 <main id="main">
 <div class="wrap">
-<p class="crumbs"><a href="../../">Forside</a><span aria-hidden="true">/</span><a href="../../#cases">Cases</a><span aria-hidden="true">/</span><span>Brætspillet</span></p>
+<p class="crumbs"><a href="../../">Forside</a><span aria-hidden="true">/</span><a href="../../#cases">Cases</a><span aria-hidden="true">/</span><span>AI first brætspil</span></p>
 <header class="case-hero">
   <span class="tag">Eget projekt</span>
-  <h1>Brætspillet</h1>
-  <p class="lede">Et terningespil, hvor AI bygger kort, regler og balance.</p>
+  <h1>AI first brætspil</h1>
+  <p class="lede">Udviklet med AI.</p>
 </header>
 <dl class="ledger">
-  <div class="spend"><dt><span class="tip" tabindex="0">Brugt på AI<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>264 mio.<span class="u">tokens</span></dd>
+  <div><dt><span class="tip" tabindex="0">Tokens<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>264 mio.<span class="u">tokens</span></dd>
     <span class="n">9 sessioner</span></div>
-  <div class="spend"><dt><span class="tip" tabindex="0">Listepris<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad de samme tokens ville koste hos udbyderne. Jeg betaler et fast abonnement, så det er ikke min regning.</span></span></dt><dd>1.406<span class="u">kr</span></dd>
+  <div class="cost"><dt><span class="tip" tabindex="0">AI-forbrug<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad tokens ville koste til udbydernes listepris. Jeg betaler et fast abonnement, så det er ikke min faktiske regning.</span></span></dt><dd>−1.406<span class="u">kr</span></dd>
     <span class="n">hvad tokens ville koste</span></div>
-  <div class="zero"><dt>Tjent</dt><dd>0<span class="u">kr</span></dd>
+  <div class="earn"><dt>Omsætning</dt><dd>0<span class="u">kr</span></dd>
     <span class="n">Under udvikling</span></div>
   <div><dt>Måler startet</dt><dd>3. juni</dd>
     <span class="n">2026</span></div>
 </dl>
 </div>
-<div style="margin-top:clamp(3rem,7vw,5rem)"><section class="section"><div class="wrap split"><h2 class="label">Kort introduktion</h2><div class="prose"><p>Et terningespil for to til fire spillere. Et spil tager 20 til 25 minutter.</p><p>Mekanikken er i familie med King of Tokyo Duel. Navn og tema holder jeg for mig selv, indtil spillet er klar.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Det har jeg bygget</h2><div class="prose"><ul><li>Alle kort ligger i én datafil. Kort, spilleplade og print-and-play-PDF bygges automatisk ud fra den.</li><li>En simulator spiller 5.000 spil ad gangen, så jeg kan se om en regelændring vipper balancen.</li><li>Kortillustrationerne er genereret med AI.</li><li>En spilbar version i browseren til hurtige test.</li></ul></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Hvor det står</h2><div class="prose"><p>Print-and-play findes, og spillet bliver testet. Det sælges ikke endnu, så regnskabet står på 0 kr.</p></div></div></section></div>
+<div style="margin-top:clamp(3rem,7vw,5rem)"><section class="section"><div class="wrap split"><h2 class="label">Kort introduktion</h2><div class="prose"><p>Et terningespil for to til fire spillere. Et spil tager 20 til 25 minutter.</p><p>Navn og tema holder jeg for mig selv, indtil spillet er klar.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Det har jeg bygget</h2><div class="prose"><ul><li>Alle kort ligger i én datafil. Kort, spilleplade og print-and-play-PDF bygges automatisk ud fra den.</li><li>En simulator spiller 5.000 spil ad gangen, så jeg kan se om en regelændring vipper balancen.</li><li>Kortillustrationerne er genereret med AI.</li><li>En spilbar version i browseren til hurtige test.</li></ul></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Hvor det står</h2><div class="prose"><p>Print-and-play findes, og spillet bliver testet. Det sælges ikke endnu, så omsætningen står på 0 kr.</p></div></div></section></div>
 <div style="margin-top:clamp(2rem,5vw,3rem)"><div class="wrap"><a class="next" href="../../case/trustpilot/"><span class="label">Næste case</span><strong>Trustpilot →</strong></a></div></div>
 <div class="wrap"><aside class="cta" id="kontakt"><p>Send mig den proces, der tager flest timer om ugen. Så kigger jeg på, om AI kan tage den.</p><a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a></aside></div>
 </main>
@@ -399,7 +404,7 @@ body{overflow-x:clip}
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="../../ai/">Åbent regnskab</a>
+  <a href="../../ai/">Resultater live</a>
 </footer></div>
 </body>
 </html>

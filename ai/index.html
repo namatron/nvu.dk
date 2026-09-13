@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Her er tallene for de projekter, jeg bygger i offentligheden. Hvad de har brugt af AI, og hvad de har tjent. Tallene kommer fra min egen måling og opdateres, når jeg bygger siden.">
-<title>Åbent regnskab · Nam Vu</title>
+<meta name="description" content="Her er resultaterne for de projekter, jeg bygger i offentligheden. Hvad de har kostet i AI, og hvad de har omsat. Tallene kommer fra min egen måling.">
+<title>Resultater · Nam Vu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -13,7 +13,7 @@
   --ground:#F4F5F3; --surface:#FFFFFF; --soft:#E4EDEC;
   --ink:#14181B; --muted:#58646A; --faint:#859094;
   --accent:#0D5C63; --accent-hover:#0A474D; --on-accent:#FFFFFF;
-  --amber:#8A5E14;
+  --amber:#8A5E14; --neg:#B3261E; --pos:#1B7A48;
   --line:#DBDFDB; --line-strong:#B6BDB9;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"Source Serif 4",Georgia,"Times New Roman",serif;
@@ -25,7 +25,7 @@
     --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
     --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
     --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-    --amber:#C99A3E;
+    --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
     --line:#232B2E; --line-strong:#37444A;
     color-scheme:dark;
   }
@@ -34,7 +34,7 @@
   --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
   --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
   --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-  --amber:#C99A3E;
+  --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
   --line:#232B2E; --line-strong:#37444A;
   color-scheme:dark;
 }
@@ -359,6 +359,11 @@ body{overflow-x:clip}
 /* Paa skaerme smallere end 16:9 beskaerer videoen siderne. Forankr lidt mod venstre,
    saa personen rykker mod hoejre og vaek fra overskriften. Mobil beholder midten. */
 @media (min-width:761px){.vhero video,.vhero .poster{object-position:15% 35%}}
+
+/* Resultater: AI-forbrug er en udgift (roed, minus), omsaetning er indtaegt (groen). */
+.ledger .cost dd,.fig.cost .v{color:var(--neg)}
+.ledger .earn dd,.fig.earn .v{color:var(--pos)}
+.case-row .mini b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -367,7 +372,7 @@ body{overflow-x:clip}
   <a class="brand" href="../">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="../#cases">Cases</a>
-    <a href="../ai/" aria-current="page">Regnskab</a>
+    <a href="../ai/" aria-current="page">Resultater</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -375,20 +380,20 @@ body{overflow-x:clip}
 <main id="main">
 <div class="wrap">
 <header class="case-hero">
-  <span class="tag">Åbent regnskab</span>
+  <span class="tag">Resultater live</span>
   <h1>Hvad jeg bygger med AI</h1>
-  <p class="lede">Her er tallene for de projekter, jeg bygger i offentligheden. Hvad de har brugt af AI, og hvad de har tjent. Tallene kommer fra min egen måling og opdateres, når jeg bygger siden.</p>
+  <p class="lede">Her er resultaterne for de projekter, jeg bygger i offentligheden. Hvad de har kostet i AI, og hvad de har omsat. Tallene kommer fra min egen måling.</p>
 </header>
 <dl class="ledger">
-  <div class="spend"><dt><span class="tip" tabindex="0">Brugt på AI<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>272 mio.<span class="u">tokens</span></dd>
+  <div><dt><span class="tip" tabindex="0">Tokens<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>272 mio.<span class="u">tokens</span></dd>
     <span class="n">10 sessioner</span></div>
-  <div class="spend"><dt><span class="tip" tabindex="0">Listepris<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad de samme tokens ville koste hos udbyderne. Jeg betaler et fast abonnement, så det er ikke min regning.</span></span></dt><dd>1.447<span class="u">kr</span></dd>
+  <div class="cost"><dt><span class="tip" tabindex="0">AI-forbrug<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad tokens ville koste til udbydernes listepris. Jeg betaler et fast abonnement, så det er ikke min faktiske regning.</span></span></dt><dd>−1.447<span class="u">kr</span></dd>
     <span class="n">hvad tokens ville koste</span></div>
-  <div class="zero"><dt>Tjent</dt><dd>0<span class="u">kr</span></dd>
+  <div class="earn"><dt>Omsætning</dt><dd>0<span class="u">kr</span></dd>
     <span class="n">første krone er ikke landet</span></div>
-  <div><dt>Projekter</dt><dd>2</dd><span class="n">i åbent regnskab</span></div>
+  <div><dt>Projekter</dt><dd>2</dd><span class="n">med resultater live</span></div>
 </dl>
-<p class="note" style="margin-top:1.2rem">Tokens er den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler. Listeprisen er hvad de samme tokens ville koste hos udbyderne. Jeg betaler et fast abonnement, så det er ikke min regning, men det viser størrelsen.</p>
+<p class="note" style="margin-top:1.2rem">Tokens er den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler. AI-forbruget er hvad de samme tokens ville koste til udbydernes listepris. Jeg betaler et fast abonnement, så det er ikke min faktiske regning, men det viser størrelsen.</p>
 </div>
 <section class="section" style="margin-top:clamp(2.5rem,6vw,4rem)"><div class="wrap split">
   <h2 class="label">Projekter</h2>
@@ -396,22 +401,22 @@ body{overflow-x:clip}
     <div class="rows"><article class="row">
   <div><h3>Build in public</h3><p class="what">Content om det jeg bygger. Skal tjene sine egne penge på sponsorater og affiliate.</p><p class="meta">Startet 13. september 2026 · Måler startet 13. september 2026</p></div>
   <div class="figs">
-    <span class="fig spend"><span class="k">Tokens</span><span class="v">8 mio.</span></span>
-    <span class="fig spend"><span class="k">Listepris</span><span class="v">40 kr</span></span>
-    <span class="fig "><span class="k">Tjent</span><span class="v">0 kr</span></span>
+    <span class="fig"><span class="k">Tokens</span><span class="v">8 mio.</span></span>
+    <span class="fig cost"><span class="k">AI-forbrug</span><span class="v">−40 kr</span></span>
+    <span class="fig earn"><span class="k">Omsætning</span><span class="v">0 kr</span></span>
   </div>
   <p class="pledge"><strong>Løfte til mig selv:</strong> Tjener sporet hverken penge eller leads inden 13. december 2026, lukker jeg det og bruger tiden et andet sted.</p>
 </article><article class="row">
-  <div><h3><a href="../case/braetspil/">Brætspillet →</a></h3><p class="what">Et terningespil under udvikling. Regler, balance og kortillustrationer bygget med AI.</p><p class="meta">Under udvikling · Måler startet 3. juni 2026</p></div>
+  <div><h3><a href="../case/braetspil/">AI first brætspil →</a></h3><p class="what">Udviklet med AI. Regler, balance og kortillustrationer.</p><p class="meta">Under udvikling · Måler startet 3. juni 2026</p></div>
   <div class="figs">
-    <span class="fig spend"><span class="k">Tokens</span><span class="v">264 mio.</span></span>
-    <span class="fig spend"><span class="k">Listepris</span><span class="v">1.406 kr</span></span>
-    <span class="fig "><span class="k">Tjent</span><span class="v">0 kr</span></span>
+    <span class="fig"><span class="k">Tokens</span><span class="v">264 mio.</span></span>
+    <span class="fig cost"><span class="k">AI-forbrug</span><span class="v">−1.406 kr</span></span>
+    <span class="fig earn"><span class="k">Omsætning</span><span class="v">0 kr</span></span>
   </div>
   
 </article></div>
     <p class="note" style="margin-top:1.6rem">Konsulentarbejde for kunder er ikke med her. De tal er ikke mine at offentliggøre.</p>
-    <p class="stamp">Opdateret 13. september 2026 kl. 20:54</p>
+    <p class="stamp">Opdateret 13. september 2026 kl. 20:59</p>
   </div>
 </div></section>
 <div class="wrap"><aside class="cta" id="kontakt"><p>Send mig den proces, der tager flest timer om ugen. Så kigger jeg på, om AI kan tage den.</p><a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a></aside></div>
@@ -420,7 +425,7 @@ body{overflow-x:clip}
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="../ai/">Åbent regnskab</a>
+  <a href="../ai/">Resultater live</a>
 </footer></div>
 </body>
 </html>

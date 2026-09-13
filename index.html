@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Nam Vu bygger AI-systemer til små forretninger og viser regnskabet åbent. Salg, opfølgning og administration, bygget af en der ikke er udvikler.">
+<meta name="description" content="Nam Vu har en kommerciel baggrund, bygger med AI og viser resultaterne live.">
 <title>Nam Vu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
   --ground:#F4F5F3; --surface:#FFFFFF; --soft:#E4EDEC;
   --ink:#14181B; --muted:#58646A; --faint:#859094;
   --accent:#0D5C63; --accent-hover:#0A474D; --on-accent:#FFFFFF;
-  --amber:#8A5E14;
+  --amber:#8A5E14; --neg:#B3261E; --pos:#1B7A48;
   --line:#DBDFDB; --line-strong:#B6BDB9;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"Source Serif 4",Georgia,"Times New Roman",serif;
@@ -25,7 +25,7 @@
     --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
     --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
     --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-    --amber:#C99A3E;
+    --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
     --line:#232B2E; --line-strong:#37444A;
     color-scheme:dark;
   }
@@ -34,7 +34,7 @@
   --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
   --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
   --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-  --amber:#C99A3E;
+  --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
   --line:#232B2E; --line-strong:#37444A;
   color-scheme:dark;
 }
@@ -359,6 +359,11 @@ body{overflow-x:clip}
 /* Paa skaerme smallere end 16:9 beskaerer videoen siderne. Forankr lidt mod venstre,
    saa personen rykker mod hoejre og vaek fra overskriften. Mobil beholder midten. */
 @media (min-width:761px){.vhero video,.vhero .poster{object-position:15% 35%}}
+
+/* Resultater: AI-forbrug er en udgift (roed, minus), omsaetning er indtaegt (groen). */
+.ledger .cost dd,.fig.cost .v{color:var(--neg)}
+.ledger .earn dd,.fig.earn .v{color:var(--pos)}
+.case-row .mini b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -367,7 +372,7 @@ body{overflow-x:clip}
   <a class="brand" href="./">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="./#cases">Cases</a>
-    <a href="ai/">Regnskab</a>
+    <a href="ai/">Resultater</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -380,26 +385,26 @@ body{overflow-x:clip}
   </video>
   <div class="inner">
     <h1><span class="l"><span class="w" style="animation-delay:0.12s">Jeg</span> <span class="w" style="animation-delay:0.21s">er</span> <span class="w" style="animation-delay:0.30s">ikke</span> <span class="w" style="animation-delay:0.39s">udvikler.</span></span> <span class="l"><span class="w" style="animation-delay:0.48s">Jeg</span> <span class="w" style="animation-delay:0.57s">bygger</span> <span class="w" style="animation-delay:0.66s">alligevel.</span></span></h1>
-    <p class="lede">Jeg kommer fra salg. Jeg bygger med AI. Og jeg viser regnskabet.</p>
+    <p class="lede">Jeg har en kommerciel baggrund. Jeg bygger med AI, og jeg viser resultaterne live.</p>
     <div class="actions">
       <a class="pill" href="mailto:nam@nvu.dk">Skriv til mig<span class="c" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="vlink" href="ai/">Se regnskabet</a>
+      <a class="vlink" href="ai/">Se resultaterne</a>
     </div>
   </div>
   <div class="corner"><span>AI-genereret video</span>
     <button class="vtoggle" type="button" aria-pressed="false">Pause</button></div>
 </section>
 <div class="wrap" style="padding-top:clamp(2.5rem,6vw,4rem)">
-<div class="ledger-head"><p class="label">Åbent regnskab · opdateret 13. september 2026</p>
-  <a href="ai/">Hele regnskabet →</a></div>
+<div class="ledger-head"><p class="label">Resultater live · opdateret 13. september 2026</p>
+  <a href="ai/">Alle resultater →</a></div>
 <dl class="ledger">
-  <div class="spend"><dt><span class="tip" tabindex="0">Brugt på AI<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>272 mio.<span class="u">tokens</span></dd>
+  <div><dt><span class="tip" tabindex="0">Tokens<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI-modellerne regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>272 mio.<span class="u">tokens</span></dd>
     <span class="n">10 sessioner</span></div>
-  <div class="spend"><dt><span class="tip" tabindex="0">Listepris<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad de samme tokens ville koste hos udbyderne. Jeg betaler et fast abonnement, så det er ikke min regning.</span></span></dt><dd>1.447<span class="u">kr</span></dd>
+  <div class="cost"><dt><span class="tip" tabindex="0">AI-forbrug<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad tokens ville koste til udbydernes listepris. Jeg betaler et fast abonnement, så det er ikke min faktiske regning.</span></span></dt><dd>−1.447<span class="u">kr</span></dd>
     <span class="n">hvad tokens ville koste</span></div>
-  <div class="zero"><dt>Tjent</dt><dd>0<span class="u">kr</span></dd>
+  <div class="earn"><dt>Omsætning</dt><dd>0<span class="u">kr</span></dd>
     <span class="n">første krone er ikke landet</span></div>
-  <div><dt>Projekter</dt><dd>2</dd><span class="n">i åbent regnskab</span></div>
+  <div><dt>Projekter</dt><dd>2</dd><span class="n">med resultater live</span></div>
 </dl>
 </div>
 
@@ -414,11 +419,11 @@ body{overflow-x:clip}
   <p class="label">Cases</p>
   <div class="cases"><a class="case-row" href="case/braetspil/">
   <span class="tag">Eget projekt</span>
-  <span><h3>Brætspillet</h3><p>Et terningespil, hvor AI bygger kort, regler og balance.</p></span>
-  <span class="mini"><b>264 mio.</b> tokens<br>0 kr tjent</span><span class="arr" aria-hidden="true">→</span></a><a class="case-row" href="ai/">
+  <span><h3>AI first brætspil</h3><p>Udviklet med AI.</p></span>
+  <span class="mini"><b>264 mio.</b> tokens<br>0 kr omsætning</span><span class="arr" aria-hidden="true">→</span></a><a class="case-row" href="ai/">
   <span class="tag">Eget projekt</span>
-  <span><h3>Åbent regnskab</h3><p>Hvad mine projekter bruger på AI, og hvad de tjener. Klientarbejde er ikke med.</p></span>
-  <span class="mini"><b>272 mio.</b> tokens<br>0 kr tjent</span><span class="arr" aria-hidden="true">→</span></a><a class="case-row" href="case/trustpilot/">
+  <span><h3>Resultater live</h3><p>Hvad mine projekter koster i AI, og hvad de omsætter. Klientarbejde er ikke med.</p></span>
+  <span class="mini"><b>272 mio.</b> tokens<br>0 kr omsætning</span><span class="arr" aria-hidden="true">→</span></a><a class="case-row" href="case/trustpilot/">
   <span class="tag">Erfaring</span>
   <span><h3>Trustpilot</h3><p>Fire år med at lede Customer Success for de nordiske B2B-kunder.</p></span>
   <span class="mini"></span><span class="arr" aria-hidden="true">→</span></a></div>
@@ -433,7 +438,7 @@ body{overflow-x:clip}
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="ai/">Åbent regnskab</a>
+  <a href="ai/">Resultater live</a>
 </footer></div>
 <script>
 (function () {

@@ -1,5 +1,5 @@
 {
-  "genereret": "2026-09-13T20:54+02:00",
+  "genereret": "2026-09-13T20:59+02:00",
   "projekter": [
     {
       "titel": "Build in public",
@@ -15,8 +15,8 @@
       "tjent_kr": 0
     },
     {
-      "titel": "Brætspillet",
-      "hvad": "Et terningespil under udvikling. Regler, balance og kortillustrationer bygget med AI.",
+      "titel": "AI first brætspil",
+      "hvad": "Udviklet med AI. Regler, balance og kortillustrationer.",
       "status": "Under udvikling",
       "loefte": "",
       "case": "braetspil",

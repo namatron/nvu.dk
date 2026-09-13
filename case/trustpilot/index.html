@@ -13,7 +13,7 @@
   --ground:#F4F5F3; --surface:#FFFFFF; --soft:#E4EDEC;
   --ink:#14181B; --muted:#58646A; --faint:#859094;
   --accent:#0D5C63; --accent-hover:#0A474D; --on-accent:#FFFFFF;
-  --amber:#8A5E14;
+  --amber:#8A5E14; --neg:#B3261E; --pos:#1B7A48;
   --line:#DBDFDB; --line-strong:#B6BDB9;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"Source Serif 4",Georgia,"Times New Roman",serif;
@@ -25,7 +25,7 @@
     --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
     --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
     --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-    --amber:#C99A3E;
+    --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
     --line:#232B2E; --line-strong:#37444A;
     color-scheme:dark;
   }
@@ -34,7 +34,7 @@
   --ground:#0D1113; --surface:#141A1C; --soft:#12282A;
   --ink:#E6EAE8; --muted:#9AA6A9; --faint:#6E7A7D;
   --accent:#5FB3B8; --accent-hover:#7FC6CA; --on-accent:#0D1113;
-  --amber:#C99A3E;
+  --amber:#C99A3E; --neg:#F08A80; --pos:#5CC98D;
   --line:#232B2E; --line-strong:#37444A;
   color-scheme:dark;
 }
@@ -359,6 +359,11 @@ body{overflow-x:clip}
 /* Paa skaerme smallere end 16:9 beskaerer videoen siderne. Forankr lidt mod venstre,
    saa personen rykker mod hoejre og vaek fra overskriften. Mobil beholder midten. */
 @media (min-width:761px){.vhero video,.vhero .poster{object-position:15% 35%}}
+
+/* Resultater: AI-forbrug er en udgift (roed, minus), omsaetning er indtaegt (groen). */
+.ledger .cost dd,.fig.cost .v{color:var(--neg)}
+.ledger .earn dd,.fig.earn .v{color:var(--pos)}
+.case-row .mini b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -367,7 +372,7 @@ body{overflow-x:clip}
   <a class="brand" href="../../">Nam Vu <small>NVU</small></a>
   <nav aria-label="Hovedmenu">
     <a href="../../#cases" aria-current="page">Cases</a>
-    <a href="../../ai/">Regnskab</a>
+    <a href="../../ai/">Resultater</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
@@ -383,14 +388,14 @@ body{overflow-x:clip}
 <dl class="ledger"><div><dt>Rolle</dt><dd>Team Lead</dd><span class="n">Customer Success Nordics</span></div><div><dt>Periode</dt><dd>4 år</dd><span class="n">juli 2019 til oktober 2023</span></div><div><dt>Team</dt><dd>14+</dd><span class="n">Customer Success Managers</span></div><div><dt>Portefølje</dt><dd>10 → 20</dd><span class="n">mio. EUR i årlig kontraktværdi</span></div></dl>
 </div>
 <div style="margin-top:clamp(3rem,7vw,5rem)"><section class="section"><div class="wrap split"><h2 class="label">Kort introduktion</h2><div class="prose"><p>Jeg sad med Trustpilots B2B-kunder i Norden. Over 2.000 SaaS-kunder og en portefølje, der både skulle holdes og vokse.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Rollen</h2><div class="prose"><p>Jeg ledte et team på over 14 Customer Success Managers og havde ansvaret for porteføljen i Skandinavien.</p><p>Jeg var også en del af All Stars-teamet: top-performere udvalgt af en komité på tværs af afdelingerne og sat på strategiske projekter.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Resultat</h2><div class="prose"><p>Porteføljens årlige kontraktværdi gik fra 10 til 20 mio. EUR. En fordobling.</p></div></div></section><section class="section"><div class="wrap split"><h2 class="label">Det tager jeg med</h2><div class="prose"><p>Kundebehov og forretningsprocesser først. Når jeg ved hvor tiden forsvinder i en forretning, ved jeg også hvor AI gør en forskel. Værktøjet kommer til sidst.</p></div></div></section></div>
-<div style="margin-top:clamp(2rem,5vw,3rem)"><div class="wrap"><a class="next" href="../../case/braetspil/"><span class="label">Næste case</span><strong>Brætspillet →</strong></a></div></div>
+<div style="margin-top:clamp(2rem,5vw,3rem)"><div class="wrap"><a class="next" href="../../case/braetspil/"><span class="label">Næste case</span><strong>AI first brætspil →</strong></a></div></div>
 <div class="wrap"><aside class="cta" id="kontakt"><p>Send mig den proces, der tager flest timer om ugen. Så kigger jeg på, om AI kan tage den.</p><a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a></aside></div>
 </main>
 <div class="wrap"><footer class="foot">
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
   <a href="https://www.linkedin.com/in/namvu7/" rel="noopener">LinkedIn</a>
-  <a href="../../ai/">Åbent regnskab</a>
+  <a href="../../ai/">Resultater live</a>
 </footer></div>
 </body>
 </html>
