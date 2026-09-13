@@ -1,5 +1,5 @@
 {
-  "genereret": "2026-09-13T20:10+02:00",
+  "genereret": "2026-09-13T20:54+02:00",
   "projekter": [
     {
       "titel": "Build in public",
@@ -7,8 +7,8 @@
       "status": "Startet 13. september 2026",
       "loefte": "Tjener sporet hverken penge eller leads inden 13. december 2026, lukker jeg det og bruger tiden et andet sted.",
       "case": null,
-      "tokens": 3328013,
-      "listepris_kr": 20.39,
+      "tokens": 7598084,
+      "listepris_kr": 40.47,
       "sessioner": 1,
       "fra": "2026-09-13",
       "til": "2026-09-13",
@@ -29,8 +29,8 @@
     }
   ],
   "total": {
-    "tokens": 267506194,
-    "listepris_kr": 1426.48,
+    "tokens": 271776265,
+    "listepris_kr": 1446.56,
     "tjent_kr": 0.0,
     "sessioner": 10,
     "projekter": 2
