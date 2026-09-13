@@ -1,170 +1,128 @@
 {
-  "genereret": "2026-09-13T22:06+02:00",
-  "projekter": [
-    {
-      "noegle": "projekt_1",
-      "titel": "Build in public",
-      "hvad": "Content om det jeg bygger. Skal tjene sine egne penge på sponsorater og affiliate.",
-      "status": "Startet 13. september 2026",
-      "loefte": "Tjener sporet hverken penge eller leads inden 13. december 2026, lukker jeg det og bruger tiden et andet sted.",
-      "case": null,
-      "tokens": 0,
-      "listepris_kr": 0.0,
-      "sessioner": 0,
-      "fra": null,
-      "til": null,
-      "tjent_kr": 0
-    },
-    {
-      "noegle": "projekt_2",
-      "titel": "AI first brætspil",
-      "hvad": "Udviklet med AI. Regler, balance og kortillustrationer.",
-      "status": "Under udvikling",
-      "loefte": "",
-      "case": "braetspil",
-      "tokens": 264178181,
-      "listepris_kr": 1406.09,
-      "sessioner": 9,
-      "fra": "2026-06-03",
-      "til": "2026-09-13",
-      "tjent_kr": 0.0
-    }
-  ],
-  "privat_tokens": 3158805546,
-  "serie": [
+  "genereret": "2026-09-13T22:22+02:00",
+  "tokens_i_alt": 3455785384,
+  "kostpris_kr_i_alt": 33636.41,
+  "kostpris_forklaring": "Hvad tokens ville koste til udbydernes API-listepris. Faktisk betaling er et fast abonnement.",
+  "pr_dag": [
     {
       "dato": "2026-08-15",
-      "privat": 0
+      "tokens": 0
     },
     {
       "dato": "2026-08-16",
-      "privat": 0
+      "tokens": 0
     },
     {
       "dato": "2026-08-17",
-      "privat": 17178894
+      "tokens": 17178894
     },
     {
       "dato": "2026-08-18",
-      "privat": 29376792
+      "tokens": 29376792
     },
     {
       "dato": "2026-08-19",
-      "privat": 15090877
+      "tokens": 15090877
     },
     {
       "dato": "2026-08-20",
-      "privat": 76208989
+      "tokens": 76208989
     },
     {
       "dato": "2026-08-21",
-      "privat": 130848857
+      "tokens": 130848857
     },
     {
       "dato": "2026-08-22",
-      "projekt_2": 485148,
-      "privat": 13849402
+      "tokens": 14334550
     },
     {
       "dato": "2026-08-23",
-      "privat": 13882597
+      "tokens": 13882597
     },
     {
       "dato": "2026-08-24",
-      "privat": 79379719
+      "tokens": 79379719
     },
     {
       "dato": "2026-08-25",
-      "privat": 96217886
+      "tokens": 96217886
     },
     {
       "dato": "2026-08-26",
-      "privat": 166720701
+      "tokens": 166720701
     },
     {
       "dato": "2026-08-27",
-      "privat": 122046706
+      "tokens": 122046706
     },
     {
       "dato": "2026-08-28",
-      "privat": 113712229
+      "tokens": 113712229
     },
     {
       "dato": "2026-08-29",
-      "privat": 38148489
+      "tokens": 38148489
     },
     {
       "dato": "2026-08-30",
-      "privat": 212926438
+      "tokens": 212926438
     },
     {
       "dato": "2026-08-31",
-      "privat": 148891574
+      "tokens": 148891574
     },
     {
       "dato": "2026-09-01",
-      "privat": 21959407
+      "tokens": 21959407
     },
     {
       "dato": "2026-09-02",
-      "privat": 110897804
+      "tokens": 110897804
     },
     {
       "dato": "2026-09-03",
-      "projekt_2": 15772903,
-      "privat": 44826930
+      "tokens": 60599833
     },
     {
       "dato": "2026-09-04",
-      "privat": 43445193
+      "tokens": 43445193
     },
     {
       "dato": "2026-09-05",
-      "projekt_2": 9227336,
-      "privat": 97104605
+      "tokens": 106331941
     },
     {
       "dato": "2026-09-06",
-      "projekt_2": 6433864,
-      "privat": 20949755
+      "tokens": 27383619
     },
     {
       "dato": "2026-09-07",
-      "privat": 225860282
+      "tokens": 225860282
     },
     {
       "dato": "2026-09-08",
-      "privat": 198445035
+      "tokens": 198445035
     },
     {
       "dato": "2026-09-09",
-      "privat": 183681225
+      "tokens": 183681225
     },
     {
       "dato": "2026-09-10",
-      "privat": 135214034
+      "tokens": 135214034
     },
     {
       "dato": "2026-09-11",
-      "privat": 175294432
+      "tokens": 175294432
     },
     {
       "dato": "2026-09-12",
-      "privat": 11612661
+      "tokens": 11612661
     },
     {
       "dato": "2026-09-13",
-      "projekt_2": 4819909,
-      "privat": 318585127
+      "tokens": 356206693
     }
-  ],
-  "total": {
-    "tokens": 3422983727,
-    "tokens_offentlige": 264178181,
-    "listepris_kr": 1406.09,
-    "tjent_kr": 0.0,
-    "resultat_kr": -1406.09,
-    "sessioner": 9,
-    "projekter": 2
-  }
+  ]
 }
