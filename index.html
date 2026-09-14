@@ -486,6 +486,16 @@ body{overflow-x:clip}
 .chart .hit{cursor:pointer}
 .ledger .n a{color:var(--faint);text-decoration:underline;text-underline-offset:.2em}
 .ledger .n a:hover{color:var(--accent)}
+
+/* Trackerens tal maa aldrig stikke ud af boksen eller knaekke enheden ned paa ny linje. */
+.tracker .ledger{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tracker .ledger dd{font-size:clamp(1.5rem,2.6vw,2.3rem);white-space:nowrap;overflow-wrap:normal}
+.tracker .ledger .tokens dd{font-size:clamp(1.25rem,2vw,1.8rem)}
+@media (max-width:900px){
+  .tracker .ledger{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tracker .ledger .tokens{grid-column:1/-1}
+  .tracker .ledger dd,.tracker .ledger .tokens dd{font-size:clamp(1.45rem,6vw,2.1rem)}
+}
 </style>
 </head>
 <body>
@@ -517,7 +527,7 @@ body{overflow-x:clip}
 </section>
 <section class="tracker" id="ai-forbrug" aria-labelledby="tracker-h"><div class="wrap">
 <div class="tracker-head"><h2 id="tracker-h">Live AI-forbrug tracker</h2>
-  <p>Opdateret 14. september 2026 kl. 07:06 · opdateres dagligt</p></div>
+  <p>Opdateret 14. september 2026 kl. 07:09 · opdateres dagligt</p></div>
 <dl class="ledger">
   <div class="tokens"><dt><span class="tip" tabindex="0">Tokens i alt<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>3.513.084.644</dd></div>
   <div class="cost"><dt><span class="tip" tabindex="0">Kostpris<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad forbruget ville koste til udbydernes listepris. Jeg betaler et fast abonnement, så det er ikke min faktiske regning.</span></span></dt><dd>−34.141<span class="u">kr</span></dd></div>
@@ -540,7 +550,7 @@ body{overflow-x:clip}
   <h2 class="label">Performance AI</h2>
   <div class="services"><div class="service"><h3>AI skal give noget igen</h3><p>Det tæller først, når det sparer timer eller skaffer omsætning. Pæne svar i en chat er ikke nok.</p></div>
 <div class="service"><h3>Resultater slår demoer</h3><p>Et AI-system er først færdigt, når det kan vise hvad det koster, og hvad det giver.</p></div>
-<div class="service"><h3>Jeg bruger det selv først</h3><p>Alt jeg anbefaler, kører allerede i mine egne projekter. Resultaterne står herunder.</p></div></div>
+<div class="service"><h3>Jeg bruger det selv først</h3><p>Alt jeg anbefaler, kører allerede i mine egne projekter. Mit AI-forbrug kan du følge ovenfor.</p></div></div>
 </div></section>
 
 <section class="section"><div class="wrap split">

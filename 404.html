@@ -486,6 +486,16 @@ body{overflow-x:clip}
 .chart .hit{cursor:pointer}
 .ledger .n a{color:var(--faint);text-decoration:underline;text-underline-offset:.2em}
 .ledger .n a:hover{color:var(--accent)}
+
+/* Trackerens tal maa aldrig stikke ud af boksen eller knaekke enheden ned paa ny linje. */
+.tracker .ledger{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tracker .ledger dd{font-size:clamp(1.5rem,2.6vw,2.3rem);white-space:nowrap;overflow-wrap:normal}
+.tracker .ledger .tokens dd{font-size:clamp(1.25rem,2vw,1.8rem)}
+@media (max-width:900px){
+  .tracker .ledger{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tracker .ledger .tokens{grid-column:1/-1}
+  .tracker .ledger dd,.tracker .ledger .tokens dd{font-size:clamp(1.45rem,6vw,2.1rem)}
+}
 </style>
 </head>
 <body>
