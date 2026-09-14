@@ -6,6 +6,44 @@
   <description>Hvad jeg bygger med AI, og hvad det giver.</description>
   <language>da</language>
   <item>
+    <title>Den farligste AI-automatisering er den, der dør uden en lyd</title>
+    <link>https://nvu.dk/blog/ai-automatisering-der-fejler-i-stilhed/</link>
+    <guid isPermaLink="true">https://nvu.dk/blog/ai-automatisering-der-fejler-i-stilhed/</guid>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 +0200</pubDate>
+    <description>AI automatisering sparer kun tid, hvis den virker og ikke kræver mere vedligehold, end den sparer. Hvad jeg lærte af 31 automatiseringer.</description>
+    <content:encoded><![CDATA[<figure class="post-fig"><img src="dashboard.jpg" alt="Et kontrolpanel med mange grønne lamper og én, der er gået ud" width="1536" height="1024" fetchpriority="high"><figcaption>AI-genereret billede</figcaption></figure>
+<p>I slutningen af august talte jeg efter. Jeg havde 31 automatiseringer kørende. De hentede tal, lavede rapporter, holdt øje med udbetalinger og tog backup.</p>
+<p>Kun 3 af dem blev overvåget.</p>
+<p>Samme dag fandt jeg 2, der var holdt op med at virke. Den ene havde aldrig leveret data. Ingen af dem havde sagt noget.</p>
+<h2>Stille fejl er dyrere end ingen automatisering</h2>
+<p>Når en opgave ikke er automatiseret, ved du, at du selv skal gøre den.</p>
+<p>Når den er automatiseret, regner du med den. Holder den op uden at sige til, træffer du beslutninger på gamle tal. Eller du opdager det først, når nogen spørger, hvor rapporten blev af.</p>
+<p>Et par eksempler fra mit eget setup:</p>
+<ul><li>Et tjek fire dage tidligere viste, at 4 af 12 planlagte kørsler var døde. Årsagerne var kedelige. Et login var udløbet, computeren var gået i dvale, en adgangsnøgle manglede, og et andet program svarede med fejl.</li><li>Min backup stoppede tre gange uden varsel. Den stod stille i flere uger, før jeg så det.</li><li>For nylig udløb et mail-login. To rapporter fejlede i to døgn, før jeg opdagede det.</li></ul>
+<p>Det er ikke AI'en, der er dårlig. Det er opsætningen, der ikke kan sige fra.</p>
+<h2>Ikke alt skal automatiseres</h2>
+<p>Det er let at tro, at alt, der kan automatiseres, også skal. Det passer ikke.</p>
+<p>En automatisering er ikke gratis, når den er bygget. Den skal vedligeholdes. Logins udløber, et program skifter format, og nogen skal kigge efter, når den fejler.</p>
+<figure class="post-fig"><img src="vaegt.jpg" alt="En vægt med en manuel opgave i den ene skål og en automatisering med tandhjul i den anden" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>AI-genereret billede</figcaption></figure>
+<p>Regn det groft ud. En opgave der tager 10 minutter om ugen, er under 9 timer om året. Tager automatiseringen en dag at bygge og en time om måneden at holde kørende, har du brugt mere tid, end du har sparet.</p>
+<p>Jeg har selv slukket automatiseringer, der kostede mere, end de gav. En af dem synkroniserede et regneark, jeg selv arbejder i. Den overskrev mit arbejde. En anden skulle finde nye kunder, men fundene var for svage til, at jeg brugte dem.</p>
+<p>Da jeg senere overvejede endnu et værktøj til automatiseringer, sagde jeg nej. Det ville bare være én ting mere, der kunne fejle i stilhed.</p>
+<p>Nogle opgaver er billigst at gøre i hånden.</p>
+<h2>God hygiejne holder vedligeholdet nede</h2>
+<p>Balancen er ikke at undgå automatisering. Den er at bygge den, så den næsten ikke kræver noget bagefter. Det er de fem regler, jeg bygger efter nu.</p>
+<ol><li><strong>Fejl skal larme.</strong> Den regel vejer mere end de andre fire tilsammen. En automatisering der dør stille, er værre end ingen automatisering, fordi du regner med den.</li><li><strong>Tal frem for påstande.</strong> &quot;Rapporten er opdateret&quot; kan ikke tjekkes. &quot;47 rækker, 0 fejl, kl. 10.39&quot; kan.</li><li><strong>Tjek mod noget, du allerede kender.</strong> Et af mine værktøjer skulle finde oversete indtægter. Første version pegede på nogle af de største kæder i Danmark. Det lød for godt, og det var forkert. Fejlen blev fanget, fordi jeg testede metoden på sager, hvor jeg kendte svaret.</li><li><strong>Giv kun den adgang, der skal bruges.</strong> En manglende rettighed kan ikke misforstås. En instruks kan. Det gælder også dine data. AI skal kun kunne se det, opgaven kræver.</li><li><strong>Stop og spørg i stedet for at gætte.</strong> En automatisering der gætter, laver arbejde, du skal tjekke bagefter. Så har den ikke sparet dig noget.</li></ol>
+<h2>Færre beskeder, der betyder noget</h2>
+<p>Jeg har også slukket ting.</p>
+<p>Mine automatiseringer sendte beskeder til min telefon. En af dem sendte op til 20 frister ad gangen, to gange om dagen. Jeg holdt op med at kigge.</p>
+<p>En kanal du ignorerer, er værre end ingen kanal. Den lærer dig at overse den, og så drukner den ene besked, der faktisk betyder noget.</p>
+<p>I dag er beskederne slukket. Status ligger ét sted, hvor jeg selv kigger.</p>
+<h2>Sådan tjekker du dine egne</h2>
+<figure class="post-fig"><img src="tjekliste.jpg" alt="En tjekliste ved siden af en bærbar computer med en rolig statusside" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>AI-genereret billede</figcaption></figure>
+<p>Har du automatiseringer, der kører i dag, så stil fem spørgsmål til hver af dem:</p>
+<ul><li>Hvornår leverede den sidst noget?</li><li>Hvem får besked, hvis den stopper?</li><li>Hvad sker der, hvis den leverer en tom fil? Den ser nemlig rask ud.</li><li>Hvad koster det dig, hvis ingen opdager fejlen i en uge?</li><li>Tager den mere tid at holde kørende, end den sparer?</li></ul>
+<p>En AI automatisering giver først værdi, når du kan stole på den. Kan du ikke svare på de fem spørgsmål, så start der, før du bygger den næste.</p>]]></content:encoded>
+  </item>
+  <item>
     <title>Du bruger AI til mails. Jeg bruger det til at drive min forretning.</title>
     <link>https://nvu.dk/blog/hvad-jeg-har-bygget-med-ai/</link>
     <guid isPermaLink="true">https://nvu.dk/blog/hvad-jeg-har-bygget-med-ai/</guid>
