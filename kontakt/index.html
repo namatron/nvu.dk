@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Første samtale er gratis og uforpligtende. Fortæl kort, hvad der tager mest tid hos dig.">
+<meta name="description" content="Første samtale er gratis og uforpligtende. Et par linjer er nok. Jeg svarer selv.">
 <link rel="canonical" href="https://nvu.dk/kontakt/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Nam Vu">
 <meta property="og:title" content="Kontakt Nam Vu | AI konsulent i København">
-<meta property="og:description" content="Første samtale er gratis og uforpligtende. Fortæl kort, hvad der tager mest tid hos dig.">
+<meta property="og:description" content="Første samtale er gratis og uforpligtende. Et par linjer er nok. Jeg svarer selv.">
 <meta property="og:url" content="https://nvu.dk/kontakt/">
 <meta property="og:image" content="https://nvu.dk/assets/hero-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -581,7 +581,7 @@ dialog.kontakt h2{font-family:var(--display);font-weight:700;font-size:1.8rem;le
 @media (max-width:620px){.footer-person{grid-template-columns:1fr}.footer-person figure{max-width:18rem}}
 
 /* ------------------------------------------------------------ /kontakt/ (14/9) */
-.kontaktside{padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(1rem,3vw,2rem)}
+.kontaktside{padding-block:clamp(2.5rem,6vw,4.5rem) clamp(1rem,3vw,2rem)}
 .ks-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
 .ks-foto{margin:0 0 1.6rem}
 .ks-foto img{width:100%;height:auto;border-radius:14px;display:block}
@@ -598,6 +598,49 @@ dialog.kontakt h2{font-family:var(--display);font-weight:700;font-size:1.8rem;le
 .ks-baggrund{margin:28px 0 8px}
 .ks-baggrund h2{font:500 12px/1 var(--mono,ui-monospace,monospace);letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
 .ks-baggrund p{margin:0;line-height:1.65;font-size:16px;color:var(--ink,inherit)}
+.post-fig{margin:2rem 0}
+.post-fig img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.post-fig figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-top:.5rem}
+.post-body ol{padding-left:1.3rem}
+.post-body ol li{margin:.5rem 0}
+
+/* Kvalitetsloop 14/9 runde 1: kontrast i hero, tappemaal paa 44px og tekst paa mindst 13px paa mobil */
+.vhero .pill{background:#F4F5F3;color:#0B1012;min-height:52px}
+.vhero .pill .c{background:#0D5C63;color:#fff}
+.vhero .pill:hover{background:#fff}
+.vhero .vlink{display:inline-flex;align-items:center;min-height:44px}
+.nav .btn{min-height:44px}
+.brand{display:inline-flex;align-items:center;min-height:44px}
+.kopier{min-height:44px;padding:0 1rem;font-size:.8125rem}
+.foot a,.crumbs a{display:inline-flex;align-items:center;min-height:44px}
+.tip .q{width:1.6em;height:1.6em}
+.ledger dd .u{font-size:max(.45em,.8125rem)}
+.vhero .corner{font-size:.8125rem}
+.tracker-head p,.foot,.post-row time,.post header time{font-size:.875rem}
+.mono,.label,.eyebrow,.tag,.crumbs,dt,.k{font-size:.8125rem}
+.post-fig figcaption,.footer-person figcaption,.ks-foto figcaption{font-size:.8125rem}
+.cta .btn.li{display:none}
+.nav:has(a[aria-current="page"][href$="kontakt/"]) .btn{display:none}
+@media (max-width:760px){.vhero h1 .w{animation:none;opacity:1}}
+.btn{min-height:44px}
+.cta-mail,.start-link{display:inline-flex;align-items:center;min-height:44px}
+
+/* Kvalitetsloop 14/9 runde 2 */
+.ledger .tip{min-height:44px;display:inline-flex;align-items:center}
+.tracker-sub{font-size:.8125rem}
+@media (max-width:620px){.chart text{font-size:26px}
+  .chart text.y{text-anchor:start;transform:translate(-50px,-10px);paint-order:stroke;stroke:var(--ground);stroke-width:8px;stroke-linejoin:round}}
+.post-body ol li::before{content:none}
+.ks-info .cta-mail{font-family:var(--display);font-size:1rem;font-weight:500;color:var(--ink)}
+.raadgivning-link,.om-mig + .start-link{margin-top:1rem}
+@media (max-width:760px){
+  .vhero{min-height:0;padding-top:52svh}
+  .vhero video,.vhero .poster{height:60svh;bottom:auto;object-position:50% 12%;
+    -webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
+  .vhero::after{background:linear-gradient(180deg,rgba(6,10,12,.55) 0%,rgba(6,10,12,0) 18%)}
+  .vhero .inner{padding-bottom:3.25rem}
+}
+.crumbs{align-items:center}
 </style>
 </head>
 <body>
@@ -628,9 +671,8 @@ dialog.kontakt h2{font-family:var(--display);font-weight:700;font-size:1.8rem;le
     </dl>
   </div>
   <div class="ks-hoejre">
-    <span class="tag">Kontakt</span>
     <h1>Kontakt mig</h1>
-    <p class="lede">Første samtale er gratis og uforpligtende. Fortæl kort, hvad der tager mest tid hos dig.</p>
+    <p class="lede">Første samtale er gratis og uforpligtende. Et par linjer er nok. Jeg svarer selv.</p>
     <form class="kf" data-endpoint="https://api.web3forms.com/submit" novalidate>
     <input type="hidden" name="access_key" value="5718d1ce-feea-4a36-8d5f-8ec0f41ee7de">
     <input type="hidden" name="subject" value="Ny henvendelse fra nvu.dk">
@@ -639,23 +681,17 @@ dialog.kontakt h2{font-family:var(--display);font-weight:700;font-size:1.8rem;le
     <label>Navn<input name="name" required autocomplete="name"></label>
     <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
     <label>Virksomhed (valgfrit)<input name="company" autocomplete="organization"></label>
-    <label>Hvilken opgave tager mest tid hos dig?<textarea name="message" rows="5" required></textarea></label>
-    <p class="kf-samtykke">Jeg bruger kun dine oplysninger til at svare dig. Formularen sendes via Web3Forms.</p>
-    <button class="btn" type="submit">Send <span aria-hidden="true">→</span></button>
+    <label>Hvilken opgave koster dig mest tid eller salg?<textarea name="message" rows="5" required placeholder="Fx: Jeg bruger 5 timer om ugen på at svare på de samme kundemails."></textarea></label>
+    <p class="kf-samtykke">Jeg bruger kun dine oplysninger til at svare dig. Formularen sendes via tjenesten Web3Forms til min mail.</p>
+    <button class="btn" type="submit">Send besked <span aria-hidden="true">→</span></button>
     <p class="kf-status" role="status" aria-live="polite" data-tak="Tak. Din besked er sendt, og jeg svarer selv." data-fejl="Beskeden gik ikke igennem. Skriv direkte til nam@nvu.dk."></p>
   </form>
-    <div class="ks-trin"><h2 class="label">Det sker der, når du skriver</h2><ol class="start-trin"><li>Du skriver, hvilken opgave der tager mest tid hos dig.</li><li>Jeg svarer selv, og vi tager en første samtale om, hvor AI kan starte.</li><li>Vi sætter AI op på den ene opgave. Resten venter, til den virker.</li></ol></div>
+    <div class="ks-trin"><h2 class="label">Det sker der, når du skriver</h2><ol class="start-trin"><li>Du skriver, hvilken opgave der tager mest tid hos dig.</li><li>Jeg svarer selv, og vi tager en første samtale om din opgave, ikke om værktøjer.</li><li>Vi sætter AI op på den ene opgave. Resten venter, til den virker.</li></ol></div>
   </div>
 </div>
 </div>
 </main>
-<div class="wrap"><section class="footer-person" aria-label="Om Nam Vu">
-  <figure><img src="../assets/portraet.jpg" alt="Portræt af Nam Vu" width="480" height="320" loading="lazy">
-    <figcaption>AI-genereret portræt</figcaption></figure>
-  <div><p class="fp-navn">Nam Vu</p><p class="fp-rolle">AI konsulent · København</p>
-    <div class="fp-links"><a class="cta-mail" href="mailto:nam@nvu.dk?subject=AI%20konsulent&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20">nam@nvu.dk</a>
-    <a class="btn ghost li" href="https://www.linkedin.com/in/namvu7/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg> LinkedIn</a></div></div>
-</section></div>
+
 <div class="wrap"><footer class="foot">
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
   <a href="mailto:nam@nvu.dk">nam@nvu.dk</a>
