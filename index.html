@@ -496,6 +496,54 @@ body{overflow-x:clip}
   .tracker .ledger .tokens{grid-column:1/-1}
   .tracker .ledger dd,.tracker .ledger .tokens dd{font-size:clamp(1.45rem,6vw,2.1rem)}
 }
+
+/* ---- Kvalitetsloop runde 1 (14/9) ---- */
+/* Kontrast: labels og diagramtekst skal klare AA */
+:root{--faint:#6B767A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--faint:#8E9A9D}}
+:root[data-theme="dark"]{--faint:#8E9A9D}
+.mono,.label,.eyebrow,.tag,.crumbs,dt,.k{font-size:.78rem}
+.chart text{font-size:12px;fill:var(--muted)}
+/* Ens knapper: afrundede overalt, som pillen i hero */
+.btn{border-radius:999px}
+/* Saadan starter vi */
+.start-trin{list-style:none;counter-reset:trin;margin:0 0 1.4rem;padding:0;display:flex;flex-direction:column;gap:.8rem;max-width:58ch}
+.start-trin li{counter-increment:trin;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:.8rem;align-items:baseline;font-size:1.02rem}
+.start-trin li::before{content:counter(trin);display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;
+  border:1px solid var(--accent);color:var(--accent);font-family:var(--display);font-weight:700;font-size:.95rem}
+.start-bevis{margin:0 0 .6rem;padding:.9rem 1.1rem;background:var(--soft);max-width:58ch;font-size:.98rem}
+.start-link{font-family:var(--display);font-weight:500;color:var(--accent);text-decoration:none}
+.start-link:hover{text-decoration:underline}
+/* Kontaktboks: synlig mail og bloed CTA */
+.cta-side{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem}
+.cta-mail{font-family:var(--mono);font-size:.85rem;color:var(--muted);text-decoration:none}
+.cta-mail:hover{color:var(--accent)}
+.cta-soft{font-family:var(--display);font-size:.92rem;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.cta-soft:hover{color:var(--ink);border-color:var(--ink)}
+/* Mobil-hero: ansigtet fri af teksten, lidt mindre overskrift */
+@media (max-width:760px){
+  .vhero video,.vhero .poster{object-position:50% 8%}
+  .vhero h1{font-size:clamp(2rem,9vw,2.6rem)}
+}
+
+/* ---- Kvalitetsloop runde 2 (14/9) ---- */
+.til-hvem{margin:0 0 .9rem;color:var(--accent);font-family:var(--display);font-weight:500;font-size:1rem;max-width:52ch}
+.om-mig{margin:1.4rem 0 0;color:var(--muted);font-size:.98rem;max-width:52ch}
+.start-trin{max-width:52ch}
+.start-cta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.2rem;margin:0 0 1.8rem}
+.start-cta .note{margin:0;font-size:.92rem}
+.start-bevis{display:flex;flex-direction:column;gap:.35rem;border-left:3px solid var(--accent);padding:1rem 1.25rem;background:var(--surface);
+  max-width:52ch;margin:0 0 .9rem}
+.start-bevis .big{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3rem);line-height:1;letter-spacing:-.03em;color:var(--accent)}
+.cta-mailrow{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.kopier{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;background:transparent;color:var(--muted);
+  border:1px solid var(--line-strong);border-radius:999px;padding:.25rem .65rem;cursor:pointer}
+.kopier:hover{color:var(--ink);border-color:var(--ink)}
+@media (max-width:760px){
+  .vhero{min-height:72svh}
+  .vhero::after{background:linear-gradient(180deg,rgba(6,10,12,.55) 0%,rgba(6,10,12,0) 20%),
+    linear-gradient(0deg,rgba(6,10,12,.9) 0%,rgba(6,10,12,.45) 45%,rgba(6,10,12,0) 70%)}
+}
 </style>
 </head>
 <body>
@@ -507,7 +555,7 @@ body{overflow-x:clip}
     <a href="./#blog">Blog</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
-  <a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
+  <a class="btn swap" href="mailto:nam@nvu.dk?subject=AI%20coaching&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a>
 </div></header>
 <main id="main">
 <section class="vhero" id="top" aria-label="Introduktion">
@@ -517,9 +565,9 @@ body{overflow-x:clip}
   </video>
   <div class="inner">
     <h1><span class="l"><span class="w" style="animation-delay:0.12s">AI</span> <span class="w" style="animation-delay:0.21s">coach</span> <span class="w" style="animation-delay:0.30s">for</span> <span class="w" style="animation-delay:0.39s">små</span> <span class="w" style="animation-delay:0.48s">virksomheder.</span></span> <span class="l"><span class="w" style="animation-delay:0.57s">Fra</span> <span class="w" style="animation-delay:0.66s">at</span> <span class="w" style="animation-delay:0.75s">prøve</span> <span class="w" style="animation-delay:0.84s">AI</span> <span class="w" style="animation-delay:0.93s">til</span> <span class="w" style="animation-delay:1.02s">at</span> <span class="w" style="animation-delay:1.11s">vækste</span> <span class="w" style="animation-delay:1.20s">med</span> <span class="w" style="animation-delay:1.29s">det.</span></span></h1>
-    <p class="lede">Jeg er AI coach for små virksomheder, iværksættere og selvstændige. Ligesom en personlig træner bygger jeg fundamentet med dig: forståelse, vaner og de rigtige værktøjer.</p>
+    <p class="lede">Jeg hjælper små virksomheder og selvstændige med at få AI til at tage de opgaver, der æder timer. Som en personlig træner: forståelse, vaner og de rigtige værktøjer.</p>
     <div class="actions">
-      <a class="pill" href="mailto:nam@nvu.dk">Skriv til mig<span class="c" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="pill" href="mailto:nam@nvu.dk?subject=AI%20coaching&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20">Skriv til mig<span class="c" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       <a class="vlink" href="#ai-forbrug">Se mit AI-forbrug</a>
     </div>
   </div>
@@ -527,7 +575,7 @@ body{overflow-x:clip}
 </section>
 <section class="tracker" id="ai-forbrug" aria-labelledby="tracker-h"><div class="wrap">
 <div class="tracker-head"><h2 id="tracker-h">Live AI-forbrug tracker</h2>
-  <p>Opdateret 14. september 2026 kl. 07:09 · opdateres dagligt</p></div>
+  <p>Jeg bruger selv AI hver dag. Opdateret 14. september 2026 kl. 07:18.</p></div>
 <dl class="ledger">
   <div class="tokens"><dt><span class="tip" tabindex="0">Tokens i alt<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Den enhed AI regner i. Tallet kommer direkte fra Claude Code og Codex' egne logfiler.</span></span></dt><dd>3.513.084.644</dd></div>
   <div class="cost"><dt><span class="tip" tabindex="0">Kostpris<span class="q" aria-hidden="true">?</span><span class="box" role="tooltip">Hvad forbruget ville koste til udbydernes listepris. Jeg betaler et fast abonnement, så det er ikke min faktiske regning.</span></span></dt><dd>−34.141<span class="u">kr</span></dd></div>
@@ -546,18 +594,29 @@ body{overflow-x:clip}
 </div>
 </div></section>
 
-<section class="section" style="margin-top:clamp(3rem,7vw,5rem)"><div class="wrap split">
-  <h2 class="label">Performance AI</h2>
-  <div class="services"><div class="service"><h3>AI skal give noget igen</h3><p>Det tæller først, når det sparer timer eller skaffer omsætning. Pæne svar i en chat er ikke nok.</p></div>
-<div class="service"><h3>Resultater slår demoer</h3><p>Et AI-system er først færdigt, når det kan vise hvad det koster, og hvad det giver.</p></div>
-<div class="service"><h3>Jeg bruger det selv først</h3><p>Alt jeg anbefaler, kører allerede i mine egne projekter. Mit AI-forbrug kan du følge ovenfor.</p></div></div>
+<section class="section" id="coaching" style="margin-top:clamp(3rem,7vw,5rem)"><div class="wrap split">
+  <h2 class="label">AI coaching</h2>
+  <div><p class="til-hvem">Til dig der bruger AI til mails og tekster og vil have det til at tage rigtige opgaver.</p><p class="services-intro">En personlig træner giver dig fundament, rutiner og en kostplan. Som AI coach og AI konsulent gør jeg det samme for dit arbejde med AI.</p><div class="services"><div class="service"><h3>Forståelse</h3><p>Hvad AI kan, og hvad det ikke kan, i netop din forretning. Forklaret uden teknisk sprog.</p></div>
+<div class="service"><h3>Vaner</h3><p>Du får faste rutiner, så AI tager de samme opgaver hver uge. Du skal ikke huske det selv.</p></div>
+<div class="service"><h3>Værktøjer</h3><p>De rigtige redskaber sat op til netop dine opgaver.</p></div></div><p class="om-mig">Jeg er ikke udvikler. Jeg kommer fra salg og kundesucces, så jeg forklarer det uden teknisk sprog.</p></div>
+</div></section>
+
+<section class="section" id="start"><div class="wrap split">
+  <h2 class="label">Sådan starter vi</h2>
+  <div>
+    <p class="services-intro">Du behøver ikke en stor løsning. Vi starter med den opgave, der tager flest timer om ugen, og som du gør på samme måde hver gang. Det kan være bogføring, kundemails eller ordrer.</p>
+    <ol class="start-trin"><li>Du skriver, hvilken opgave der tager mest tid hos dig.</li><li>Jeg svarer selv og foreslår, hvor AI kan starte.</li><li>Vi sætter AI op på den ene opgave. Resten venter, til den virker.</li></ol>
+    <div class="start-cta"><a class="btn swap" href="mailto:nam@nvu.dk?subject=AI%20coaching&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a><span class="note">At skrive forpligter dig ikke til noget.</span></div>
+    <div class="start-bevis"><span class="big">6 t → 2 t</span><span class="label">Afregning og kontrol af tallene om ugen, hos mig selv</span></div>
+    <a class="start-link" href="blog/hvad-jeg-har-bygget-med-ai/">Se de 23 ting, jeg har bygget →</a>
+  </div>
 </div></section>
 
 <section class="section"><div class="wrap split">
-  <h2 class="label">AI coaching</h2>
-  <div><p class="services-intro">En personlig træner giver dig fundament, rutiner og en kostplan. Som AI coach og AI konsulent gør jeg det samme for dit arbejde med AI.</p><div class="services"><div class="service"><h3>Forståelse</h3><p>Hvad AI kan, og hvad det ikke kan, i netop din forretning. Forklaret uden teknisk sprog.</p></div>
-<div class="service"><h3>Vaner</h3><p>Faste rutiner hvor AI bliver brugt hver dag. Så det bliver en fast del af arbejdet.</p></div>
-<div class="service"><h3>Værktøjer</h3><p>De rigtige redskaber sat op til dine opgaver. Som en kostplan, der passer til dig.</p></div></div></div>
+  <h2 class="label">Performance AI</h2>
+  <div class="services"><div class="service"><h3>AI skal give noget igen</h3><p>Det tæller først, når det sparer timer eller skaffer omsætning. Pæne svar i en chat er ikke nok.</p></div>
+<div class="service"><h3>Resultater slår demoer</h3><p>Et AI-værktøj er først færdigt, når du kan se, hvor mange timer det sparer dig.</p></div>
+<div class="service"><h3>Jeg bruger det selv først</h3><p>Alt jeg anbefaler, kører allerede i mine egne projekter. Mit AI-forbrug kan du følge øverst på siden.</p></div></div>
 </div></section>
 
 <section class="section" id="blog"><div class="wrap split">
@@ -568,7 +627,7 @@ body{overflow-x:clip}
 
 
 
-<div class="wrap"><aside class="cta" id="kontakt"><p>Skriv hvor du bruger AI i dag, og hvor du gerne vil hen. Så tager vi en snak om dit næste skridt.</p><a class="btn swap" href="mailto:nam@nvu.dk" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a></aside></div>
+<div class="wrap"><aside class="cta" id="kontakt"><p>Hvilken opgave æder flest timer hos dig? Start der.</p><div class="cta-side"><a class="btn swap" href="mailto:nam@nvu.dk?subject=AI%20coaching&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20" aria-label="Skriv til mig: nam@nvu.dk"><span class="t">Skriv til mig <span aria-hidden="true">→</span></span><span class="i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span></a><span class="cta-mailrow"><a class="cta-mail" href="mailto:nam@nvu.dk?subject=AI%20coaching&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20">nam@nvu.dk</a><button class="kopier" type="button" data-mail="nam@nvu.dk">Kopiér mail</button></span><a class="cta-soft" href="https://www.linkedin.com/in/namvu7/" rel="noopener">Ikke klar endnu? Følg med på LinkedIn →</a></div></aside></div>
 </main>
 <div class="wrap"><footer class="foot">
   <span class="sp">NVU ApS · CVR 45571491 · København</span>
@@ -626,6 +685,14 @@ body{overflow-x:clip}
     svg.querySelectorAll('.hit.on').forEach(function (h) { h.classList.remove('on'); });
   });
 })();
+</script>
+<script>
+document.querySelectorAll('.kopier').forEach(function (k) {
+  k.addEventListener('click', function () {
+    var ok = function () { k.textContent = 'Kopieret'; setTimeout(function () { k.textContent = 'Kopiér mail'; }, 2000); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(k.getAttribute('data-mail')).then(ok, ok); } else { ok(); }
+  });
+});
 </script>
 </body>
 </html>
