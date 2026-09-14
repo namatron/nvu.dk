@@ -635,7 +635,19 @@ dialog.kontakt h2{font-family:var(--display);font-weight:700;font-size:1.8rem;le
   <button class="kd-luk" type="button" aria-label="Luk">×</button>
   <h2 id="kontakt-h">Kontakt mig</h2>
   <p class="kd-intro">Første samtale er gratis og uforpligtende. Fortæl kort, hvad der tager mest tid hos dig.</p>
-  
+  <form class="kf" data-endpoint="https://api.web3forms.com/submit" novalidate>
+    <input type="hidden" name="access_key" value="5718d1ce-feea-4a36-8d5f-8ec0f41ee7de">
+    <input type="hidden" name="subject" value="Ny henvendelse fra nvu.dk">
+    <input type="hidden" name="from_name" value="nvu.dk">
+    <input type="checkbox" name="botcheck" class="kf-bot" tabindex="-1" autocomplete="off">
+    <label>Navn<input name="name" required autocomplete="name"></label>
+    <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+    <label>Virksomhed (valgfrit)<input name="company" autocomplete="organization"></label>
+    <label>Hvilken opgave tager mest tid hos dig?<textarea name="message" rows="4" required></textarea></label>
+    <p class="kf-samtykke">Jeg bruger kun dine oplysninger til at svare dig. Formularen sendes via Web3Forms.</p>
+    <button class="btn" type="submit">Send <span aria-hidden="true">→</span></button>
+    <p class="kf-status" role="status" aria-live="polite" data-tak="Tak. Din besked er sendt, og jeg svarer selv." data-fejl="Beskeden gik ikke igennem. Skriv direkte til nam@nvu.dk."></p>
+  </form>
   <div class="kd-direkte"><p class="label">Eller skriv direkte</p>
     <span class="cta-mailrow"><a class="cta-mail" href="mailto:nam@nvu.dk?subject=AI%20coaching&amp;body=Den%20opgave%20der%20tager%20mest%20tid%20hos%20mig%3A%20">nam@nvu.dk</a>
     <button class="kopier" type="button" data-mail="nam@nvu.dk">Kopiér mail</button></span>
