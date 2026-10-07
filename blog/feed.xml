@@ -6,6 +6,65 @@
   <description>Hvad jeg bygger med AI, og hvad det giver.</description>
   <language>da</language>
   <item>
+    <title>Low, medium eller max? Bestil i Claude, som var det en restaurant</title>
+    <link>https://nvu.dk/blog/hvilken-effort-skal-du-vaelge-i-claude/</link>
+    <guid isPermaLink="true">https://nvu.dk/blog/hvilken-effort-skal-du-vaelge-i-claude/</guid>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 +0200</pubDate>
+    <description>Claude effort forklaret som et restaurantbesøg. Hvornår du skal vælge low, medium, high eller max, og 22 regler så du ikke rammer grænsen.</description>
+    <content:encoded><![CDATA[<figure class="post-fig"><img src="sodavand.jpg" alt="Nam ved en sodavandsmaskine, hvor hanerne er AI-modeller, fylder en Opus-kop i størrelse medium" width="1254" height="1254" fetchpriority="high"><figcaption>AI-genereret billede</figcaption></figure>
+<p>Jeg har bestilt den største sodavand hver eneste dag. I Claude.</p>
+<p>Hver gang jeg åbner en ny chat, skal jeg vælge effort. Low, medium, high, extra eller max. Det føles som at stå ved disken i en burgerbar. Jeg tog altid max, fordi mere tænkning måtte give bedre svar.</p>
+<p>I denne uge læste jeg en guide til at få mest muligt ud af Claude. Den har 22 regler. Jo mere jeg læste, jo mere lignede det et restaurantbesøg. Så her er reglerne, oversat til noget alle kender: at gå ud og spise.</p>
+<h2>Buffet til fast pris</h2>
+<p>Du betaler ikke pr. ret i Claude. Du betaler en fast pris om måneden, og restauranten bestemmer, hvor meget du får for pengene.</p>
+<p>Analysefirmaet SemiAnalysis har testet alle de store abonnementer. Resultatet er en buffet, hvor portionerne er vidt forskellige, selvom prisen er den samme.</p>
+<figure class="post-fig"><img src="graf-buffet.jpg" alt="Søjlediagram: for 100 dollar om måneden giver Claude Opus 5.5 arbejde for 5.725 dollar, Claude Fable 5.1 for 1.273 dollar og ChatGPT for 1.055 dollar" width="2000" height="730" loading="lazy" decoding="async"><figcaption>AI-genereret billede</figcaption></figure>
+<p>Claude er den mest gavmilde buffet lige nu. Men selv en buffet kan tømmes, hvis du bestiller dumt.</p>
+<h2>Sådan regner køkkenet</h2>
+<p>Forestil dig en tjener, der ved hver ny bestilling læser hele bonen op fra toppen. Hver ret I har bestilt i aften. Hver ændring. Hvert billede I har vist ham. Igen og igen.</p>
+<figure class="post-fig"><img src="tjener-bon.jpg" alt="En tjener læser en meterlang bon op fra toppen ved et bord" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>AI-genereret billede</figcaption></figure>
+<p>Sådan arbejder Claude. Hver besked koster tre ting:</p>
+<ol><li><strong>Læsning.</strong> Hele samtalen fra start, hver gang.</li><li><strong>Tænkning.</strong> Effort bestemmer hvor meget.</li><li><strong>Skrivning.</strong> Svaret, dokumentet eller præsentationen.</li></ol>
+<p>Køkkenet har heldigvis lidt forberedt (det man kalder cache). Det, Claude allerede har læst, koster langt mindre næste gang. Næsten alle reglerne handler derfor om tre ting: få køkkenet til at tænke mindre, hold bonen kort, og ødelæg ikke det, køkkenet har forberedt.</p>
+<h2>Størrelsen: vælg medium</h2>
+<p>Det her er den regel, der fik mig til at skrive indlægget.</p>
+<ul><li><strong>Low</strong> til stavning, omformatering og oversættelse</li><li><strong>Medium</strong> til alt andet</li><li><strong>High</strong> til den ene store opgave, hvor svaret skal sidde i første forsøg</li><li><strong>Extra og max</strong> lader du stå</li></ul>
+<p>Min egen tommelfingerregel: 80 % af tiden er medium godt nok til alt. Mails, analyser, research, planer og tekster. Resten er high.</p>
+<p>Den største sodavand slukker ikke tørsten bedre.</p>
+<h2>Retten: vælg én og bliv ved den</h2>
+<p><strong>Vælg den ret, der mætter mest.</strong> På samme abonnement giver Opus 5.5 over fire gange så meget arbejde som Fable 5.1. Skal du bare have et hurtigt svar, så skru ned for størrelsen. Skift ikke ret.</p>
+<p><strong>Skift aldrig ret midt i måltidet.</strong> Hver model har sit eget køkken. Skifter du fra Opus til Sonnet midt i en chat, starter det nye køkken forfra og læser hele bonen til fuld pris.</p>
+<h2>Bordet: ét selskab pr. bord</h2>
+<figure class="post-fig"><img src="nyt-bord.jpg" alt="Et rodet bord med halvspiste tallerkener ved siden af et nydækket bord med én tallerken" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>AI-genereret billede</figcaption></figure>
+<p><strong>Ét emne pr. chat.</strong> Du sætter ikke en forretningsfrokost, en fødselsdag og en date ved samme bord. LinkedIn-opslag, kundetilbud og aftensmad hører til i hver sin chat.</p>
+<p><strong>Kom ikke tilbage til kold mad.</strong> Det forberedte i køkkenet holder ikke, når du holder pause. Kommer du tilbage til en gammel chat timer senere, betaler du for hele samtalen igen, også for et spørgsmål på én linje. Bed om en doggy bag, før du går: lad Claude opsummere chatten i ti linjer (hvad I besluttede, hvad der er åbent, og næste skridt). Næste gang åbner du en ny chat og sætter opsummeringen ind.</p>
+<p><strong>Send ikke retten tilbage tre gange.</strong> Hver &quot;nej, jeg mente&quot; bliver stående på bonen og bliver læst op igen ved hver ny besked. Det forvirrer også køkkenet. Går en chat skævt, så start en ny med en kort brief på tre linjer. Eller ret din oprindelige besked i stedet for at skrive en ny.</p>
+<h2>Bestillingen: gør tjenerens job let</h2>
+<p><strong>Lad tjeneren spørge.</strong> Skriv ikke en bestilling på 500 ord, for den bliver læst op igen ved hver eneste tur. Skriv hvad du vil opnå, og bed Claude stille dig spørgsmål, før den går i gang. Den giver dig valgmuligheder, du klikker, og det koster næsten intet.</p>
+<p><strong>Bestil alt på én gang.</strong> Tre bestillinger er tre gennemlæsninger af bonen. Én bestilling med tre ønsker er én.</p>
+<p><strong>Sig det højt.</strong> En skrevet bestilling bliver tit for kort (&quot;gør den bedre&quot;), og så følger fem rettelser. Når du taler, får du hele billedet med i første forsøg. Brug mikrofonen i Claude eller et diktat-program.</p>
+<p><strong>Bare vand, tak.</strong> Claude bestemmer selv, om den vil søge på nettet, køre kode eller lave filer. Det koster ekstra. Til hurtige spørgsmål skriver du: svar her i chatten, ingen websøgning, ingen filer, under 150 ord. Brug kun den store research-funktion, når du faktisk har brug for mange kilder.</p>
+<p><strong>Se menuen, før du bestiller festmenuen.</strong> Dokumenter, præsentationer og design æder grænsen. Start aldrig med &quot;lav en præsentation på 12 slides&quot;. Aftal disposition og indhold i almindelig tekst først. Bed om selve filen til sidst.</p>
+<p><strong>Send kun saucen tilbage.</strong> Skal noget i et dokument laves om, så marker netop det stykke og bed om en ændring dér. I en almindelig chat skriver du: lav kun dette afsnit om, behold resten.</p>
+<h2>Tilbehøret: tag kun det med, du spiser</h2>
+<p><strong>Få tilbehøret på bestilling.</strong> Hver app du har koblet på (mail, Drive, Notion, Slack) fylder på bordet i alle dine chats. Sæt dem til at blive hentet efter behov, og slå dem fra, som chatten ikke bruger.</p>
+<p><strong>Tag ikke hele køleskabet med.</strong> Et helt skærmbillede koster op til 50 gange mere end et beskåret udsnit. Beskær altid. En PDF koster meget pr. side, så lav den om til tekst, før du giver den til Claude.</p>
+<figure class="post-fig"><img src="graf-screenshot.jpg" alt="Søjlediagram: et helt skærmbillede koster op til 4.784 tokens, en PDF-side op til 3.000 og et beskåret udsnit under 100" width="2000" height="730" loading="lazy" decoding="async"><figcaption>AI-genereret billede</figcaption></figure>
+<p><strong>Forbered det, du bruger hver dag.</strong> En fil, du uploader i fem chats, bliver læst fem gange. Læg den i et Projekt i stedet. Det bliver forberedt én gang og koster mindre, hver gang du bruger det. I desktop-appen giver du Claude én mappe, aldrig hele din Dokumenter-mappe.</p>
+<p><strong>Hold din faste bestilling kort.</strong> Dine instruktioner, projekt-instruktioner og beskrivelsen af dig selv bliver læst igen og igen. Hold hver af dem under 2.000 ord. Detaljerne til dagens opgave skriver du i chatten.</p>
+<p><strong>Bliv stamgæst.</strong> Anthropic anbefaler selv to sætninger i dine instruktioner. På dansk lyder de cirka sådan: &quot;Når du har svaret på noget, så betragt det som færdigt. Fokusér på det, brugeren spørger om nu, og gå ikke tilbage til et tidligere svar, medmindre brugeren spørger til det eller peger på et problem.&quot; Så tænker Claude mindre på opfølgende spørgsmål. Slet samtidig alle dine gamle &quot;tænk dig grundigt om&quot;-linjer. Det klarer effort nu.</p>
+<h2>Åbningstiderne</h2>
+<p><strong>Del dagen i tre måltider.</strong> Claude giver dig et vindue på fem timer plus en ugentlig grænse. Arbejd i tre blokke: morgen, eftermiddag og aften. Tjek forbruget under Indstillinger, før du går i gang med noget stort.</p>
+<p><strong>Gem dit gratis gavekort.</strong> Du har én gratis nulstilling af grænsen. Brug den ikke mandag morgen, for grænserne nulstilles alligevel om søndagen. Søndag er derfor dagen, hvor du roligt kan køre med extra og max, for det, der ikke bliver brugt, forsvinder alligevel.</p>
+<p><strong>Stop de faste leverancer, du ikke spiser.</strong> Planlagte opgaver kører i skyen, også når computeren er lukket. En opgave hver time er 24 fulde kørsler om dagen. Sæt dem på pause, du ikke læser.</p>
+<p><strong>Ryd bordet mellem gæsterne.</strong> Bruger du Claude Code, så giv den én præcis opgave ad gangen og skriv /clear, før den næste. Hold CLAUDE.md (filen Claude Code læser først) under 200 linjer, og tjek /usage en gang om ugen.</p>
+<p><strong>Bestil ikke dessert i et steakhouse.</strong> Claude kan godt kode et billede, men det er dyrt sammenlignet med de værktøjer, der er bygget til billeder. Gør det sjældent.</p>
+<h2>Det tager jeg med</h2>
+<p>Jeg kørte på max, fordi det føltes som det sikre valg. I virkeligheden var det bare det dyre valg.</p>
+<p>Det gælder mange steder i en forretning. Det rigtige valg er det, der passer til opgaven.</p>
+<p>Start på medium næste gang du åbner en chat. Skru kun op, når svaret faktisk er for tyndt.</p>]]></content:encoded>
+  </item>
+  <item>
     <title>Den farligste AI-automatisering er den, der dør uden en lyd</title>
     <link>https://nvu.dk/blog/ai-automatisering-der-fejler-i-stilhed/</link>
     <guid isPermaLink="true">https://nvu.dk/blog/ai-automatisering-der-fejler-i-stilhed/</guid>
