@@ -1,128 +1,128 @@
 {
-  "genereret": "2026-10-07T11:08+02:00",
-  "tokens_i_alt": 10923456158,
-  "kostpris_kr_i_alt": 80389.75,
+  "genereret": "2026-10-07T11:19+02:00",
+  "tokens_i_alt": 359723199,
+  "kostpris_kr_i_alt": 61027.49,
   "kostpris_forklaring": "Hvad tokens ville koste til udbydernes API-listepris. Faktisk betaling er et fast abonnement.",
   "pr_dag": [
     {
       "dato": "2026-09-08",
-      "tokens": 198445035
+      "tokens": 7214234
     },
     {
       "dato": "2026-09-09",
-      "tokens": 183681225
+      "tokens": 13375044
     },
     {
       "dato": "2026-09-10",
-      "tokens": 135214034
+      "tokens": 9467778
     },
     {
       "dato": "2026-09-11",
-      "tokens": 175294432
+      "tokens": 9907736
     },
     {
       "dato": "2026-09-12",
-      "tokens": 11612661
+      "tokens": 698031
     },
     {
       "dato": "2026-09-13",
-      "tokens": 398956381
+      "tokens": 11687038
     },
     {
       "dato": "2026-09-14",
-      "tokens": 346088139
+      "tokens": 12783247
     },
     {
       "dato": "2026-09-15",
-      "tokens": 173533175
+      "tokens": 9700114
     },
     {
       "dato": "2026-09-16",
-      "tokens": 246718978
+      "tokens": 5714321
     },
     {
       "dato": "2026-09-17",
-      "tokens": 179679412
+      "tokens": 11854351
     },
     {
       "dato": "2026-09-18",
-      "tokens": 42964894
+      "tokens": 1601761
     },
     {
       "dato": "2026-09-19",
-      "tokens": 84972717
+      "tokens": 2062784
     },
     {
       "dato": "2026-09-20",
-      "tokens": 357873283
+      "tokens": 8224629
     },
     {
       "dato": "2026-09-21",
-      "tokens": 533341792
+      "tokens": 12531472
     },
     {
       "dato": "2026-09-22",
-      "tokens": 196880561
+      "tokens": 8887925
     },
     {
       "dato": "2026-09-23",
-      "tokens": 161004823
+      "tokens": 6954021
     },
     {
       "dato": "2026-09-24",
-      "tokens": 66682096
+      "tokens": 3781172
     },
     {
       "dato": "2026-09-25",
-      "tokens": 213380602
+      "tokens": 9578000
     },
     {
       "dato": "2026-09-26",
-      "tokens": 452055807
+      "tokens": 12103904
     },
     {
       "dato": "2026-09-27",
-      "tokens": 672190802
+      "tokens": 12183748
     },
     {
       "dato": "2026-09-28",
-      "tokens": 125997774
+      "tokens": 2858356
     },
     {
       "dato": "2026-09-29",
-      "tokens": 209107358
+      "tokens": 9243704
     },
     {
       "dato": "2026-09-30",
-      "tokens": 185063036
+      "tokens": 5260910
     },
     {
       "dato": "2026-10-01",
-      "tokens": 360015676
+      "tokens": 12258899
     },
     {
       "dato": "2026-10-02",
-      "tokens": 889227988
+      "tokens": 20431286
     },
     {
       "dato": "2026-10-03",
-      "tokens": 25446007
+      "tokens": 1782047
     },
     {
       "dato": "2026-10-04",
-      "tokens": 445494593
+      "tokens": 9018816
     },
     {
       "dato": "2026-10-05",
-      "tokens": 482538585
+      "tokens": 13310463
     },
     {
       "dato": "2026-10-06",
-      "tokens": 476875560
+      "tokens": 16767949
     },
     {
       "dato": "2026-10-07",
-      "tokens": 497787428
+      "tokens": 18627631
     }
   ]
 }
