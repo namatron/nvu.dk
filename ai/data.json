@@ -1,13 +1,9 @@
 {
-  "genereret": "2026-11-08T21:30+01:00",
-  "tokens_i_alt": 27582986903,
-  "kostpris_kr_i_alt": 130704.59,
+  "genereret": "2026-11-09T21:30+01:00",
+  "tokens_i_alt": 28124723012,
+  "kostpris_kr_i_alt": 133110.92,
   "kostpris_forklaring": "Hvad tokens ville koste til udbydernes API-listepris. Faktisk betaling er et fast abonnement.",
   "pr_dag": [
-    {
-      "dato": "2026-10-10",
-      "tokens": 108623785
-    },
     {
       "dato": "2026-10-11",
       "tokens": 225799363
@@ -122,7 +118,11 @@
     },
     {
       "dato": "2026-11-08",
-      "tokens": 78907678
+      "tokens": 80886632
+    },
+    {
+      "dato": "2026-11-09",
+      "tokens": 539757155
     }
   ]
 }
